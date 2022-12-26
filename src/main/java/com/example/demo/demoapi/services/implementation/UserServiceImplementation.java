@@ -1,4 +1,5 @@
 package com.example.demo.demoapi.services.implementation;
+
 import com.example.demo.demoapi.entity.User;
 import com.example.demo.demoapi.exceptions.ApiRequestException;
 import com.example.demo.demoapi.dtos.request.UserDetailsRequestDTO;
@@ -6,14 +7,13 @@ import com.example.demo.demoapi.dtos.response.UserResponseDTO;
 import com.example.demo.demoapi.repositories.UserRepository;
 import com.example.demo.demoapi.services.UserService;
 import com.querydsl.core.types.Predicate;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.access.prepost.PostAuthorize;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -23,51 +23,42 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class UserServiceImplementation implements UserService {
 
 
-    UserRepository userRepository;
+    private final UserRepository userRepository;
+    private final ModelMapper modelMapper;
+    private final PasswordEncoder passwordEncoder;
 
-    ModelMapper modelMapper;
 
-    PasswordEncoder passwordEncoder;
-
-    @Autowired
-    public UserServiceImplementation(UserRepository userRepository, ModelMapper modelMapper, PasswordEncoder passwordEncoder) {
-        this.userRepository = userRepository;
-        this.modelMapper = modelMapper;
-        this.passwordEncoder = passwordEncoder;
-    }
-
-    @PreAuthorize("hasAuthority('ADMIN')")
+    // @PreAuthorize("hasAuthority('ADMIN')")
     @Override
     public UserResponseDTO create(UserDetailsRequestDTO userDetailsRequestDTO) {
-        User user = modelMapper.map(userDetailsRequestDTO, User.class);
+        Optional<User> userEmail = userRepository.findByEmail(userDetailsRequestDTO.getEmail());
 
-        Optional<User> userEmail = userRepository.findByEmail(user.getEmail());
         if (userEmail.isPresent()) {
             throw new ApiRequestException("User with this email already exist!");
         }
+
+        User user = modelMapper.map(userDetailsRequestDTO, User.class);
         user.setPassword(passwordEncoder.encode(userDetailsRequestDTO.getPassword()));
 
         User createdUser = userRepository.save(user);
         log.info("User is created with first name: " + userDetailsRequestDTO.getFirstName() + " and last name: " + userDetailsRequestDTO.getLastName());
 
-        UserResponseDTO returnValue = modelMapper.map(createdUser, UserResponseDTO.class);
-
-
-        return returnValue;
+        return modelMapper.map(createdUser, UserResponseDTO.class);
     }
 
-    @PreAuthorize("hasAuthority('USER')")
+    //@PreAuthorize("hasAuthority('USER')")
     @Override
     public Page<UserResponseDTO> getAll(Pageable pageable, Predicate predicate) {
         log.info("Getting all users...");
 
         Page<User> users = userRepository.findAll(predicate, pageable);
-        List<UserResponseDTO>userStream= users.stream().map(user -> modelMapper.map(user, UserResponseDTO.class)).collect(Collectors.toList());
+        List<UserResponseDTO> userStream = users.stream().map(user -> modelMapper.map(user, UserResponseDTO.class)).collect(Collectors.toList());
 
-        return new PageImpl<>(userStream,pageable,users.getTotalElements());
+        return new PageImpl<>(userStream, pageable, users.getTotalElements());
     }
 
     @Override
@@ -75,30 +66,30 @@ public class UserServiceImplementation implements UserService {
 
         Optional<User> opUser = userRepository.findById(id);
         if (!opUser.isPresent()) {
-            log.error("Trying to get user with id: " + id + " who does not exist!");
-            throw new ApiRequestException("User with id: " + id + " does not exist, please enter another id");
+            log.error("Trying to get user with id: {} who does not exist!",id);
+            throw new ApiRequestException("User with id: {} does not exist, please enter another id");
 
         }
         User user = opUser.get();
-
-        UserResponseDTO returnValue = modelMapper.map(user, UserResponseDTO.class);
-
         log.info("Picked user with id: " + id);
-        return returnValue;
+        return modelMapper.map(user, UserResponseDTO.class);
+
     }
 
     @Override
-    public UserResponseDTO update(long id, UserDetailsRequestDTO userDetailsRequestDTO) throws Exception {
+    public UserResponseDTO update(long id, UserDetailsRequestDTO userDetailsRequestDTO) {
         log.info("Updating  user...");
         Optional<User> opUser = userRepository.findById(id);
         if (!opUser.isPresent()) {
-            log.error("Trying to update user with id: " + id + " who don't exist!");
-            throw new ApiRequestException("User with id: " + id + " does not exist, please enter another id");
+            log.error("Trying to update user with id: {} who don't exist!", id);
+            throw new ApiRequestException("User with id: does not exist, please enter another id");
         }
         User user = opUser.get();
 
         //checking
-        if (userDetailsRequestDTO.getFirstName() != null) {
+
+        // IZDVOJITI I TESTIRATI ZASEBNU METODU
+        if (StringUtils.isNotBlank(userDetailsRequestDTO.getFirstName())) {
             user.setFirstName(userDetailsRequestDTO.getFirstName());
         }
         if (userDetailsRequestDTO.getLastName() != null) {
@@ -110,9 +101,9 @@ public class UserServiceImplementation implements UserService {
 
         User updatedUser = userRepository.save(user);
 
-        UserResponseDTO returnValue = modelMapper.map(updatedUser, UserResponseDTO.class);
-        log.info("User with id: " + id + " is updated");
-        return returnValue;
+        log.info("User with id: {} is updated",id);
+        return modelMapper.map(updatedUser, UserResponseDTO.class);
+
     }
 
     @Override
@@ -120,11 +111,11 @@ public class UserServiceImplementation implements UserService {
         log.info("Deleting user...");
         if (userRepository.existsById(id)) {
             userRepository.deleteById(id);
-            log.info("User with id: " + id + " is deleted");
+            log.info("User with id: {id} is deleted");
             return true;
         } else {
-            log.error("Trying to delete user with id: " + id + " who don't exist!");
-            throw new ApiRequestException("User with id: " + id + " does not exist, please enter another id");
+            log.error("Trying to delete user with id: {} who don't exist!", id);
+            throw new ApiRequestException("User with id: {} does not exist, please enter another id");
         }
     }
 

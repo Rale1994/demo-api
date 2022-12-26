@@ -6,16 +6,25 @@ import com.example.demo.demoapi.entity.User;
 import com.example.demo.demoapi.services.UserService;
 import com.querydsl.core.types.Predicate;
 import io.swagger.annotations.Api;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.querydsl.binding.QuerydslPredicate;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 
 import javax.validation.Valid;
-import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("users")
 @Api
@@ -54,9 +63,9 @@ public class UserController {
     public void delete(@PathVariable long id) {
         boolean deletedUser = userService.delete(id);
         if (deletedUser == true) {
-            System.out.println("Users has been deleted, with id: " + id);
+            log.info("User with id:{id} has been deleted");
         } else {
-            System.out.println("There are some problems!");
+            log.error("We have some problem!");
 
         }
     }

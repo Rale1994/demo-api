@@ -2,7 +2,9 @@ package com.example.demo.demoapi.dtos.request;
 
 import lombok.Getter;
 import lombok.Setter;
-import javax.validation.constraints.*;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -23,7 +25,7 @@ public class UserDetailsRequestDTO {
     @NotBlank(message = "Password is required")
     private String password;
 
-    @NotBlank(message = "Role of user is required")
+    @NotBlank(message = "Role  is required")
     private String role;
 
 

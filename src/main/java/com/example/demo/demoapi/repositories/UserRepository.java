@@ -17,7 +17,6 @@ public interface UserRepository extends PagingAndSortingRepository<User, Long>, 
 
     Optional<User> findByEmail(String email);
 
-
     Optional<User> findByUsername(String username);
 
     @Override

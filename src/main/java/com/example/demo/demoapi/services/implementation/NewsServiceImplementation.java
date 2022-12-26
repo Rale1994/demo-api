@@ -11,6 +11,7 @@ import com.example.demo.demoapi.repositories.NewsRepository;
 import com.example.demo.demoapi.repositories.UserRepository;
 import com.example.demo.demoapi.services.NewsService;
 import com.querydsl.core.types.Predicate;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,19 +27,13 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class NewsServiceImplementation implements NewsService {
 
-    private NewsRepository newsRepository;
-    private UserRepository userRepository;
+    private final NewsRepository newsRepository;
+    private final UserRepository userRepository;
+    private final ModelMapper modelMapper;
 
-    private ModelMapper modelMapper;
-
-    @Autowired
-    public NewsServiceImplementation(NewsRepository newsRepository, UserRepository userRepository, ModelMapper modelMapper) {
-        this.newsRepository = newsRepository;
-        this.userRepository = userRepository;
-        this.modelMapper = modelMapper;
-    }
 
     @Override
     public Page<NewsResponseDTO> findAll(Predicate predicate, Pageable pageable) {
@@ -52,9 +47,9 @@ public class NewsServiceImplementation implements NewsService {
 
     @Override
     public NewsResponseDTO create(NewsRequestDTO newsRequestDTO) {
-        Optional<User> userOptional = userRepository.findById(newsRequestDTO.getUsers_id());
+        Optional<User> userOptional = userRepository.findById(newsRequestDTO.getUsersId());
         if (!userOptional.isPresent()) {
-            throw new ApiRequestException("User with id: " + newsRequestDTO.getUsers_id() + " does not exist!");
+            throw new ApiRequestException("User with id: " + newsRequestDTO.getUsersId() + " does not exist!");
         }
         User user = userOptional.get();
 
@@ -64,18 +59,16 @@ public class NewsServiceImplementation implements NewsService {
 
         News news = modelMapper.map(newsRequestDTO, News.class);
 
-        if (newsRequestDTO.getDate() == null) {
-            news.setDate(LocalDateTime.now());
+        if (newsRequestDTO.getCreatedDate() == null) {
+            news.setCreatedDate(LocalDateTime.now());
         } else {
-//            LocalDateTime dateTime = Utils.parseStringToDate(newsRequestDTO.getDate());
-            news.setDate(newsRequestDTO.getDate());
+            news.setCreatedDate(newsRequestDTO.getCreatedDate());
         }
         news.setUser(user);
 
         News savedNews = newsRepository.save(news);
 
-        NewsResponseDTO returnValue = modelMapper.map(savedNews, NewsResponseDTO.class);
-        return returnValue;
+        return modelMapper.map(savedNews, NewsResponseDTO.class);
     }
 
 
@@ -91,15 +84,13 @@ public class NewsServiceImplementation implements NewsService {
             news.setUpdatedDate(LocalDateTime.now());
         } else {
             news.setUpdatedDate(newsUpdateRequestDTO.getUpdatedDate());
-            //news.setUpdatedDate(Utils.parseStringToDate(newsUpdateRequestDTO.getUpdatedDate()));
         }
 
         news.setTitle(newsUpdateRequestDTO.getTitle());
 
         News updatedNews = newsRepository.save(news);
 
-        NewsResponseDTO returnValue = modelMapper.map(updatedNews, NewsResponseDTO.class);
+        return modelMapper.map(updatedNews, NewsResponseDTO.class);
 
-        return returnValue;
     }
 }
