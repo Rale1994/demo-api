@@ -25,12 +25,9 @@ import java.util.stream.Collectors;
 @Slf4j
 @RequiredArgsConstructor
 public class UserServiceImplementation implements UserService {
-
-
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
     private final PasswordEncoder passwordEncoder;
-
 
     // @PreAuthorize("hasAuthority('ADMIN')")
     @Override
@@ -63,32 +60,22 @@ public class UserServiceImplementation implements UserService {
 
     @Override
     public UserResponseDTO getOne(long id) {
-
         Optional<User> opUser = userRepository.findById(id);
-        if (!opUser.isPresent()) {
-            log.error("Trying to get user with id: {} who does not exist!",id);
-            throw new ApiRequestException("User with id: {} does not exist, please enter another id");
 
-        }
+        boolean exist = checkingUser(opUser, id);
+
         User user = opUser.get();
         log.info("Picked user with id: " + id);
         return modelMapper.map(user, UserResponseDTO.class);
-
     }
 
     @Override
     public UserResponseDTO update(long id, UserDetailsRequestDTO userDetailsRequestDTO) {
         log.info("Updating  user...");
         Optional<User> opUser = userRepository.findById(id);
-        if (!opUser.isPresent()) {
-            log.error("Trying to update user with id: {} who don't exist!", id);
-            throw new ApiRequestException("User with id: does not exist, please enter another id");
-        }
+        boolean exist = checkingUser(opUser, id);
         User user = opUser.get();
 
-        //checking
-
-        // IZDVOJITI I TESTIRATI ZASEBNU METODU
         if (StringUtils.isNotBlank(userDetailsRequestDTO.getFirstName())) {
             user.setFirstName(userDetailsRequestDTO.getFirstName());
         }
@@ -98,10 +85,9 @@ public class UserServiceImplementation implements UserService {
         if (userDetailsRequestDTO.getEmail() != null) {
             user.setEmail(userDetailsRequestDTO.getEmail());
         }
-
         User updatedUser = userRepository.save(user);
 
-        log.info("User with id: {} is updated",id);
+        log.info("User with id: {} is updated", id);
         return modelMapper.map(updatedUser, UserResponseDTO.class);
 
     }
@@ -119,5 +105,11 @@ public class UserServiceImplementation implements UserService {
         }
     }
 
-
+    private boolean checkingUser(Optional<User> opUser, long id) {
+        if (!opUser.isPresent()) {
+            log.error("Trying to get user with id: {} who does not exist!", id);
+            throw new ApiRequestException("User with id: {} does not exist, please enter another id");
+        }
+        return true;
+    }
 }

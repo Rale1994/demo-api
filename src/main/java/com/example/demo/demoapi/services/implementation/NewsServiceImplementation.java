@@ -14,7 +14,6 @@ import com.querydsl.core.types.Predicate;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -75,11 +74,13 @@ public class NewsServiceImplementation implements NewsService {
     @Override
     public NewsResponseDTO update(long id, NewsUpdateRequestDTO newsUpdateRequestDTO) {
         Optional<News> newsOptional = newsRepository.findById(id);
-        News news = newsOptional.get();
 
-        if (news == null) {
+        if (!newsOptional.isPresent()) {
             throw new ApiRequestException("News with this id: " + id + " does not exist!");
         }
+
+        News news = newsOptional.get();
+
         if (newsUpdateRequestDTO.getUpdatedDate() == null) {
             news.setUpdatedDate(LocalDateTime.now());
         } else {

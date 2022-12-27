@@ -28,6 +28,7 @@ import com.example.demo.demoapi.entity.User;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
@@ -185,7 +186,7 @@ class UserServiceImplementationTest {
         when(userRepository.save(user)).thenReturn(user);
 
         // ACTION
-        UserResponseDTO responseDTO= userService.update(user.getId(), userRequest);
+        UserResponseDTO responseDTO = userService.update(user.getId(), userRequest);
 
         // THEN
         assertNotNull(responseDTO);
@@ -195,20 +196,63 @@ class UserServiceImplementationTest {
     }
 
     @Test
-    void tryToGetOneUser(){
+    void tryToUpdateUserEmailWithoutFirstNameAndLastName() {
         // GIVEN
-        User user= createUser();
-        UserResponseDTO userResponseDTO= new UserResponseDTO();
+        User user = createUser();
+        UserDetailsRequestDTO userRequest = new UserDetailsRequestDTO();
+        userRequest.setEmail("email@example");
+
+        UserResponseDTO userResponseDTO = new UserResponseDTO();
+        userResponseDTO.setLastName(userRequest.getLastName());
+        userResponseDTO.setFirstName(userRequest.getFirstName());
+        userResponseDTO.setEmail(userRequest.getEmail());
 
         // WHEN
         when(userRepository.findById(user.getId())).thenReturn(Optional.of(user));
         when(modelMapper.map(user, UserResponseDTO.class)).thenReturn(userResponseDTO);
+        when(userRepository.save(user)).thenReturn(user);
 
         // ACTION
-        UserResponseDTO response= userService.getOne(user.getId());
+        UserResponseDTO responseDTO = userService.update(user.getId(), userRequest);
 
         // THEN
-        assertNotNull(response);
+        assertNotNull(responseDTO);
+        assertEquals(responseDTO.getEmail(), userRequest.getEmail());
+        assertEquals(responseDTO.getFirstName(), null);
+        assertEquals(responseDTO.getLastName(), null);
+    }
+
+    @Test
+    void tryToDeleteUser() {
+        // GIVEN
+        User user = createUser();
+
+        // WHEN
+        when(userRepository.existsById(user.getId())).thenReturn(true);
+
+        // ACTION
+//       UserResponseDTO responseDTO=userService.getOne(user.getId());
+
+        boolean deleted = userService.delete(user.getId());
+
+//        assertThrows(ApiRequestException.class, () -> userService.getOne(user.getId()));
+
+        // THEN
+        assertTrue(deleted);
+
+        verify(userRepository).deleteById(user.getId());
+    }
+
+    @Test
+    void tryDeleteUserWhoDoesNotExist() {
+        // GIVEN
+        User user = createUser();
+
+        // WHEN
+        when(userRepository.existsById(user.getId())).thenReturn(false);
+
+        // THEN
+        assertThrows(ApiRequestException.class, () -> userService.delete(user.getId()));
     }
 
 

@@ -1,0 +1,239 @@
+package com.example.demo.demoapi.services.implementation;
+
+import com.example.demo.demoapi.dtos.request.NewsRequestDTO;
+import com.example.demo.demoapi.dtos.request.NewsUpdateRequestDTO;
+import com.example.demo.demoapi.dtos.response.NewsResponseDTO;
+import com.example.demo.demoapi.dtos.response.UserNewsResponseDTO;
+import com.example.demo.demoapi.entity.News;
+import com.example.demo.demoapi.exceptions.ApiRequestException;
+import com.example.demo.demoapi.repositories.NewsRepository;
+import com.example.demo.demoapi.repositories.UserRepository;
+import com.querydsl.core.BooleanBuilder;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatchers;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import com.example.demo.demoapi.entity.User;
+import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import com.querydsl.core.types.Predicate;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+
+
+@ExtendWith(MockitoExtension.class)
+class NewsServiceImplementationTest {
+
+    @Mock
+    private NewsRepository newsRepository;
+    @Mock
+    private UserRepository userRepository;
+    @Mock
+    private ModelMapper modelMapper;
+    @InjectMocks
+    private NewsServiceImplementation newsService;
+
+
+    @Test
+    void tryToGetAllNews() {
+        // GIVEN
+        List<News> news = getNewsList();
+        Page<News> newsPage = new PageImpl<>(news);
+        NewsResponseDTO newsResponse = new NewsResponseDTO();
+
+        // WHEN
+        when(newsRepository.findAll(any(Predicate.class), any(Pageable.class))).thenReturn(newsPage);
+        when(modelMapper.map(any(News.class), ArgumentMatchers.eq(NewsResponseDTO.class))).thenReturn(newsResponse);
+
+        // ACTION
+        Page<NewsResponseDTO> response = newsService.findAll(new BooleanBuilder(), PageRequest.of(0, 10));
+
+        // THEN
+        List<News> newNews = new ArrayList<>();
+        newNews.addAll(newsPage.getContent());
+        assertNotNull(response);
+        assertEquals(122333L, news.get(2).getId());
+        assertEquals(2221167, news.get(0).getUser().getId());
+
+    }
+
+    @Test
+    void testCreateNews() {
+        // GIVEN
+        NewsRequestDTO newsRequestDTO = new NewsRequestDTO();
+        newsRequestDTO.setTitle("TITLE1");
+        newsRequestDTO.setUsersId(2221167);
+
+        User user = new User();
+        user.setFirstName("RADOS");
+        user.setLastName("GOLUBOVIC");
+
+        UserNewsResponseDTO userNewsResponseDTO = new UserNewsResponseDTO();
+        userNewsResponseDTO.setFirstName(user.getFirstName());
+        userNewsResponseDTO.setLastName(user.getLastName());
+
+        News news = new News(newsRequestDTO);
+
+        NewsResponseDTO newsResponseDTO = new NewsResponseDTO(news);
+
+        // WHEN
+        when(userRepository.findById(newsRequestDTO.getUsersId())).thenReturn(Optional.of(user));
+        when(modelMapper.map(newsRequestDTO, News.class)).thenReturn(news);
+        when(newsRepository.save(news)).thenReturn(news);
+        when(modelMapper.map(news, NewsResponseDTO.class)).thenReturn(newsResponseDTO);
+
+        // ACTION
+        NewsResponseDTO response = newsService.create(newsRequestDTO);
+
+        // THEN
+        assertNotNull(response);
+    }
+
+    @Test
+    void testCreateNewsWithUserWhoDoesNotExist() {
+        // GIVEN
+        NewsRequestDTO newsRequestDTO = createNewsRequestDTO();
+
+        User user = new User();
+        user.setFirstName("RADOS");
+        user.setLastName("GOLUBOVIC");
+
+        // WHEN
+        when(userRepository.findById(newsRequestDTO.getUsersId())).thenReturn(Optional.empty());
+
+        //THEN
+        assertThrows(ApiRequestException.class, () -> newsService.create(newsRequestDTO));
+    }
+
+    @Test
+    void testCreateUserWithInsertedDate() {
+        // GIVEN
+        NewsRequestDTO newsRequestDTO = createNewsRequestDTO();
+        String date = "2022-12-08 09:42:51";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+        newsRequestDTO.setCreatedDate(dateTime);
+
+        User user = new User();
+        user.setFirstName("RADOS");
+        user.setLastName("GOLUBOVIC");
+
+        UserNewsResponseDTO userNewsResponseDTO = new UserNewsResponseDTO();
+        userNewsResponseDTO.setFirstName(user.getFirstName());
+        userNewsResponseDTO.setLastName(user.getLastName());
+
+        News news = new News(newsRequestDTO);
+
+        NewsResponseDTO newsResponseDTO = new NewsResponseDTO(news);
+
+        // WHEN
+        when(userRepository.findById(newsRequestDTO.getUsersId())).thenReturn(Optional.of(user));
+        when(modelMapper.map(newsRequestDTO, News.class)).thenReturn(news);
+        when(newsRepository.save(news)).thenReturn(news);
+        when(modelMapper.map(news, NewsResponseDTO.class)).thenReturn(newsResponseDTO);
+
+        // ACTION
+        NewsResponseDTO response = newsService.create(newsRequestDTO);
+
+        // THEN
+        assertNotNull(response);
+    }
+
+    @Test
+    void testUpdateNews() {
+        // GIVE
+        NewsUpdateRequestDTO updateRequestDTO = new NewsUpdateRequestDTO();
+        updateRequestDTO.setTitle("TITLE UPDATED");
+        News news = new News(updateRequestDTO);
+        news.setId(123123124412L);
+
+        NewsResponseDTO newsResponseDTO = new NewsResponseDTO(news);
+
+        // WHEN
+        when(newsRepository.findById(news.getId())).thenReturn(Optional.of(news));
+        when(newsRepository.save(news)).thenReturn(news);
+        when(modelMapper.map(news, NewsResponseDTO.class)).thenReturn(newsResponseDTO);
+
+        // ACTION
+        NewsResponseDTO response = newsService.update(news.getId(), updateRequestDTO);
+
+        // THEN
+        assertNotNull(response);
+    }
+
+    @Test
+    void testUpdateUserSetUpdatedDate(){
+        // GIVE
+        NewsUpdateRequestDTO updateRequestDTO = new NewsUpdateRequestDTO();
+        updateRequestDTO.setTitle("TITLE UPDATED");
+        String date = "2022-12-08 09:42:51";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+        updateRequestDTO.setUpdatedDate(dateTime);
+        News news = new News(updateRequestDTO);
+        news.setId(123123124412L);
+
+        NewsResponseDTO newsResponseDTO = new NewsResponseDTO(news);
+
+        // WHEN
+        when(newsRepository.findById(news.getId())).thenReturn(Optional.of(news));
+        when(newsRepository.save(news)).thenReturn(news);
+        when(modelMapper.map(news, NewsResponseDTO.class)).thenReturn(newsResponseDTO);
+
+        // ACTION
+        NewsResponseDTO response = newsService.update(news.getId(), updateRequestDTO);
+
+        // THEN
+        assertNotNull(response);
+
+    }
+
+    @Test
+    void testUpdateNewsWhichDoesNotExist() {
+        // GIVE
+        NewsUpdateRequestDTO updateRequestDTO = new NewsUpdateRequestDTO();
+        updateRequestDTO.setTitle("TITLE NOT UPDATED");
+        updateRequestDTO.setUpdatedDate(LocalDateTime.now());
+        News news = new News(updateRequestDTO);
+        news.setId(123123124412L);
+
+        // WHEN
+        when(newsRepository.findById(news.getId())).thenReturn(Optional.empty());
+
+        // ACTION
+        assertThrows(ApiRequestException.class, () -> newsService.update(news.getId(), updateRequestDTO));
+
+    }
+
+
+    private List<News> getNewsList() {
+        User user = new User();
+        user.setId(2221167);
+        List<News> news = new ArrayList<>();
+        news.add(new News(1233L, "Title1", LocalDateTime.now(), LocalDateTime.now(), user));
+        news.add(new News(12233L, "Title2", LocalDateTime.now(), LocalDateTime.now(), user));
+        news.add(new News(122333L, "Title3", LocalDateTime.now(), LocalDateTime.now(), user));
+        return news;
+    }
+
+    private NewsRequestDTO createNewsRequestDTO() {
+        NewsRequestDTO newsRequestDTO = new NewsRequestDTO();
+        newsRequestDTO.setTitle("TITLE1");
+        newsRequestDTO.setCreatedDate(LocalDateTime.now());
+        newsRequestDTO.setUsersId(2221167);
+        return newsRequestDTO;
+    }
+}
