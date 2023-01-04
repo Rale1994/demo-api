@@ -81,9 +81,7 @@ class NewsServiceImplementationTest {
         user.setFirstName("RADOS");
         user.setLastName("GOLUBOVIC");
 
-        UserNewsResponseDTO userNewsResponseDTO = new UserNewsResponseDTO();
-        userNewsResponseDTO.setFirstName(user.getFirstName());
-        userNewsResponseDTO.setLastName(user.getLastName());
+        UserNewsResponseDTO userNewsResponseDTO = new UserNewsResponseDTO(user);
 
         News news = new News(newsRequestDTO);
 
@@ -122,18 +120,14 @@ class NewsServiceImplementationTest {
     void testCreateUserWithInsertedDate() {
         // GIVEN
         NewsRequestDTO newsRequestDTO = createNewsRequestDTO();
-        String date = "2022-12-08 09:42:51";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+        LocalDateTime dateTime = dateTimeFormatterFromString("2022-12-08 09:42:51");
         newsRequestDTO.setCreatedDate(dateTime);
 
         User user = new User();
         user.setFirstName("RADOS");
         user.setLastName("GOLUBOVIC");
 
-        UserNewsResponseDTO userNewsResponseDTO = new UserNewsResponseDTO();
-        userNewsResponseDTO.setFirstName(user.getFirstName());
-        userNewsResponseDTO.setLastName(user.getLastName());
+        UserNewsResponseDTO userNewsResponseDTO = new UserNewsResponseDTO(user);
 
         News news = new News(newsRequestDTO);
 
@@ -175,13 +169,11 @@ class NewsServiceImplementationTest {
     }
 
     @Test
-    void testUpdateUserSetUpdatedDate(){
+    void testUpdateUserSetUpdatedDate() {
         // GIVE
         NewsUpdateRequestDTO updateRequestDTO = new NewsUpdateRequestDTO();
         updateRequestDTO.setTitle("TITLE UPDATED");
-        String date = "2022-12-08 09:42:51";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+        LocalDateTime dateTime = dateTimeFormatterFromString("2022-12-08 09:42:51");
         updateRequestDTO.setUpdatedDate(dateTime);
         News news = new News(updateRequestDTO);
         news.setId(123123124412L);
@@ -236,4 +228,11 @@ class NewsServiceImplementationTest {
         newsRequestDTO.setUsersId(2221167);
         return newsRequestDTO;
     }
+
+    private LocalDateTime dateTimeFormatterFromString(String date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+        return dateTime;
+    }
+
 }
