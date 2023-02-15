@@ -1,4 +1,4 @@
-package com.example.demo.demoapi.controller;
+package com.example.demo.demoapi.resource;
 
 import com.example.demo.demoapi.dtos.request.NewsRequestDTO;
 import com.example.demo.demoapi.dtos.request.NewsUpdateRequestDTO;

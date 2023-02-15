@@ -1,5 +1,4 @@
-package com.example.demo.demoapi.controller;
-
+package com.example.demo.demoapi.resource;
 import com.example.demo.demoapi.dtos.response.MyWeatherResponseDTO;
 import com.example.demo.demoapi.entity.City;
 import com.example.demo.demoapi.services.CityService;
@@ -40,7 +39,7 @@ public class CityController {
         return cityService.findById(id);
     }
 
-    @Scheduled(fixedRateString = "PT01H")
+    @Scheduled(cron = "0 0 1 * * *")
     public void fetch() {
         cityService.fetchWeather();
     }
