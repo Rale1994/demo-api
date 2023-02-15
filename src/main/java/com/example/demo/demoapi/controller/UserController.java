@@ -46,7 +46,6 @@ public class UserController {
     @PostMapping
     public UserResponseDTO create(@Valid @RequestBody UserDetailsRequestDTO userDetailsRequestDTO) {
         return userService.create(userDetailsRequestDTO);
-
     }
 
     @GetMapping(path = "/{id}")

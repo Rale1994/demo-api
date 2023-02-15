@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class NewsServiceImplementation implements NewsService {
+public class NewsServiceImpl implements NewsService {
 
     private final NewsRepository newsRepository;
     private final UserRepository userRepository;

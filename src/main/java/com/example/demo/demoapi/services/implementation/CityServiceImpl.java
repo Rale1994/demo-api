@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 @AllArgsConstructor
 @Service
-public class CityServiceImplementation implements CityService {
+public class CityServiceImpl implements CityService {
 
     private final String OPEN_WEATHER_API_URL = "http://api.openweathermap.org/data/2.5/weather?q={}&APPID=61fbcbce338905c8df0553683941ec03";
     private final RestTemplate restTemplate;

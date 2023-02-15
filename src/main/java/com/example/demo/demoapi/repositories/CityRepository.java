@@ -9,7 +9,6 @@ import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
 
 @Repository
 public interface CityRepository extends PagingAndSortingRepository<City, Long>, QuerydslPredicateExecutor<City>, QuerydslBinderCustomizer<QCity> {

@@ -44,7 +44,7 @@ class NewsServiceImplementationTest {
     @Mock
     private ModelMapper modelMapper;
     @InjectMocks
-    private NewsServiceImplementation newsService;
+    private NewsServiceImpl newsService;
 
 
     @Test
