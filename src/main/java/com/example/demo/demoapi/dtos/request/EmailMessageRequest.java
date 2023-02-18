@@ -7,7 +7,7 @@ import lombok.Setter;
 @RequiredArgsConstructor
 @Getter
 @Setter
-public class EmailMessageRequestDTO {
+public class EmailMessageRequest {
     private String to;
     private String subject;
     private String message;

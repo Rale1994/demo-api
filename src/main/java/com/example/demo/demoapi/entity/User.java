@@ -1,6 +1,6 @@
 package com.example.demo.demoapi.entity;
 
-import com.example.demo.demoapi.dtos.request.UserDetailsRequestDTO;
+import com.example.demo.demoapi.dtos.request.UserDetailsRequest;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -39,7 +39,11 @@ public class User {
             cascade = CascadeType.ALL)
     private List<News> news;
 
-    public User(UserDetailsRequestDTO userRequest) {
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Subscription> subscriptions;
+
+
+    public User(UserDetailsRequest userRequest) {
         this.firstName = userRequest.getFirstName();
         this.lastName = userRequest.getLastName();
         this.email = userRequest.getEmail();

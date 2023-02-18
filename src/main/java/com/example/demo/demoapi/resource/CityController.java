@@ -2,6 +2,7 @@ package com.example.demo.demoapi.resource;
 import com.example.demo.demoapi.dtos.response.MyWeatherResponseDTO;
 import com.example.demo.demoapi.entity.City;
 import com.example.demo.demoapi.services.CityService;
+import com.example.demo.demoapi.shared.Constants;
 import com.querydsl.core.types.Predicate;
 import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("cities")
+@RequestMapping(Constants.BASE_URL+"cities")
 @Api
 @AllArgsConstructor
 public class CityController {

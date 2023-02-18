@@ -2,7 +2,7 @@ package com.example.demo.demoapi.services.implementation;
 
 import com.example.demo.demoapi.entity.User;
 import com.example.demo.demoapi.exceptions.ApiRequestException;
-import com.example.demo.demoapi.dtos.request.UserDetailsRequestDTO;
+import com.example.demo.demoapi.dtos.request.UserDetailsRequest;
 import com.example.demo.demoapi.dtos.response.UserResponseDTO;
 import com.example.demo.demoapi.repositories.UserRepository;
 import com.example.demo.demoapi.services.UserService;
@@ -31,18 +31,18 @@ public class UserServiceImpl implements UserService {
 
     // @PreAuthorize("hasAuthority('ADMIN')")
     @Override
-    public UserResponseDTO create(UserDetailsRequestDTO userDetailsRequestDTO) {
-        Optional<User> userEmail = userRepository.findByEmail(userDetailsRequestDTO.getEmail());
+    public UserResponseDTO create(UserDetailsRequest userDetailsRequest) {
+        Optional<User> userEmail = userRepository.findByEmail(userDetailsRequest.getEmail());
 
         if (userEmail.isPresent()) {
             throw new ApiRequestException("User with this email already exist!");
         }
 
-        User user = modelMapper.map(userDetailsRequestDTO, User.class);
-        user.setPassword(passwordEncoder.encode(userDetailsRequestDTO.getPassword()));
+        User user = modelMapper.map(userDetailsRequest, User.class);
+        user.setPassword(passwordEncoder.encode(userDetailsRequest.getPassword()));
 
         User createdUser = userRepository.save(user);
-        log.info("User is created with first name: " + userDetailsRequestDTO.getFirstName() + " and last name: " + userDetailsRequestDTO.getLastName());
+        log.info("User is created with first name: " + userDetailsRequest.getFirstName() + " and last name: " + userDetailsRequest.getLastName());
 
         return modelMapper.map(createdUser, UserResponseDTO.class);
     }
@@ -70,20 +70,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserResponseDTO update(long id, UserDetailsRequestDTO userDetailsRequestDTO) {
+    public UserResponseDTO update(long id, UserDetailsRequest userDetailsRequest) {
         log.info("Updating  user...");
         Optional<User> opUser = userRepository.findById(id);
         boolean exist = checkingUser(opUser, id);
         User user = opUser.get();
 
-        if (StringUtils.isNotBlank(userDetailsRequestDTO.getFirstName())) {
-            user.setFirstName(userDetailsRequestDTO.getFirstName());
+        if (StringUtils.isNotBlank(userDetailsRequest.getFirstName())) {
+            user.setFirstName(userDetailsRequest.getFirstName());
         }
-        if (userDetailsRequestDTO.getLastName() != null) {
-            user.setLastName(userDetailsRequestDTO.getLastName());
+        if (userDetailsRequest.getLastName() != null) {
+            user.setLastName(userDetailsRequest.getLastName());
         }
-        if (userDetailsRequestDTO.getEmail() != null) {
-            user.setEmail(userDetailsRequestDTO.getEmail());
+        if (userDetailsRequest.getEmail() != null) {
+            user.setEmail(userDetailsRequest.getEmail());
         }
         User updatedUser = userRepository.save(user);
 

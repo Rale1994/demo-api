@@ -1,32 +1,24 @@
 package com.example.demo.demoapi.resource;
 
-import com.example.demo.demoapi.dtos.request.UserDetailsRequestDTO;
+import com.example.demo.demoapi.dtos.request.UserDetailsRequest;
 import com.example.demo.demoapi.dtos.response.UserResponseDTO;
 import com.example.demo.demoapi.entity.User;
 import com.example.demo.demoapi.services.UserService;
+import com.example.demo.demoapi.shared.Constants;
 import com.querydsl.core.types.Predicate;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.querydsl.binding.QuerydslPredicate;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 @Slf4j
 @RestController
-@RequestMapping("users")
+@RequestMapping(Constants.BASE_URL + "/users")
 @Api
 public class UserController {
 
@@ -38,14 +30,14 @@ public class UserController {
     }
 
     @GetMapping
-    public Page<UserResponseDTO> getAll(Pageable pageable, @QuerydslPredicate(root = User.class) Predicate predicate ) {
+    public Page<UserResponseDTO> getAll(Pageable pageable, @QuerydslPredicate(root = User.class) Predicate predicate) {
         return userService.getAll(pageable, predicate);
     }
 
 
     @PostMapping
-    public UserResponseDTO create(@Valid @RequestBody UserDetailsRequestDTO userDetailsRequestDTO) {
-        return userService.create(userDetailsRequestDTO);
+    public UserResponseDTO create(@Valid @RequestBody UserDetailsRequest userDetailsRequest) {
+        return userService.create(userDetailsRequest);
     }
 
     @GetMapping(path = "/{id}")
@@ -54,8 +46,8 @@ public class UserController {
     }
 
     @PutMapping(path = "/{id}")
-    public UserResponseDTO update(@PathVariable long id, @RequestBody UserDetailsRequestDTO userDetailsRequestDTO) throws Exception {
-        return userService.update(id, userDetailsRequestDTO);
+    public UserResponseDTO update(@PathVariable long id, @RequestBody UserDetailsRequest userDetailsRequest) throws Exception {
+        return userService.update(id, userDetailsRequest);
     }
 
     @DeleteMapping(path = "/{id}")

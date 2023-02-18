@@ -1,7 +1,8 @@
 package com.example.demo.demoapi.resource;
 
-import com.example.demo.demoapi.dtos.request.EmailMessageRequestDTO;
+import com.example.demo.demoapi.dtos.request.EmailMessageRequest;
 import com.example.demo.demoapi.services.EmailSenderService;
+import com.example.demo.demoapi.shared.Constants;
 import io.swagger.annotations.Api;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("email")
+@RequestMapping(Constants.BASE_URL+"email")
 @Api
 public class EmailController {
 
@@ -21,8 +22,8 @@ public class EmailController {
     }
 
     @PostMapping("/send")
-    public ResponseEntity sendEmail(@RequestBody EmailMessageRequestDTO emailMessageRequestDTO){
-        emailSenderService.sendEmail(emailMessageRequestDTO.getTo(), emailMessageRequestDTO.getSubject(), emailMessageRequestDTO.getMessage());
+    public ResponseEntity sendEmail(@RequestBody EmailMessageRequest emailMessageRequest){
+        emailSenderService.sendEmail(emailMessageRequest.getTo(), emailMessageRequest.getSubject(), emailMessageRequest.getMessage());
         return ResponseEntity.ok("Success");
     }
 }
