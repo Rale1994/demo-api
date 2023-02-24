@@ -11,4 +11,7 @@ public class SubscribeRequest {
 
     @NotBlank(message = "Type need to be set")
     private String type;
+
+    @NotBlank(message = "City need to be set")
+    private String city;
 }

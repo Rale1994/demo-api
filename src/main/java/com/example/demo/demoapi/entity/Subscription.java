@@ -1,9 +1,11 @@
 package com.example.demo.demoapi.entity;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
+@NoArgsConstructor
 @Entity(name = "subscription")
 public class Subscription {
 
@@ -13,12 +15,16 @@ public class Subscription {
 
     private String type;
 
+    private String city;
+
     @ManyToOne
     @JoinColumn(name = "usersId")
     private User user;
 
-    public Subscription(String type, User user) {
+    public Subscription(String type, String city, User user) {
         this.type = type;
+        this.city = city;
         this.user = user;
     }
+
 }

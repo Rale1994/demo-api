@@ -1,374 +1,103 @@
-2023-02-18 10:41:02.439  WARN 3516 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22h1m15s620ms268µs900ns).
-2023-02-18 10:45:41.263  INFO 12528 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 12528 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
-2023-02-18 10:45:41.268  INFO 12528 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-02-18 10:45:42.781  INFO 12528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-18 10:45:42.875  INFO 12528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
-2023-02-18 10:45:43.898  INFO 12528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-18 10:45:43.914  INFO 12528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-18 10:45:43.915  INFO 12528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-02-18 10:45:44.153  INFO 12528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-18 10:45:44.154  INFO 12528 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2813 ms
-2023-02-18 10:45:44.410  INFO 12528 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-18 10:45:44.528  INFO 12528 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-02-18 10:45:44.810  INFO 12528 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-18 10:45:44.971  INFO 12528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-18 10:45:45.228  INFO 12528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-18 10:45:45.251  INFO 12528 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-02-18 10:45:46.519  INFO 12528 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-18 10:45:46.526  INFO 12528 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-18 10:45:47.433  WARN 12528 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-18 10:45:47.833  INFO 12528 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@73502d5e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@471d6571, org.springframework.security.web.context.SecurityContextPersistenceFilter@5006a697, org.springframework.security.web.header.HeaderWriterFilter@29088d3d, org.springframework.security.web.authentication.logout.LogoutFilter@1e4bf55b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7866ffa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21f9a305, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ff87203, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@213bd66a, org.springframework.security.web.session.SessionManagementFilter@220d7eb7, org.springframework.security.web.access.ExceptionTranslationFilter@c2dab10, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@30a79476]
-2023-02-18 10:45:48.235  INFO 12528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-18 10:45:48.786  INFO 12528 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 8.014 seconds (JVM running for 8.552)
-2023-02-18 10:45:56.126  INFO 12528 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-02-18 10:45:56.127  INFO 12528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-02-18 10:45:56.129  INFO 12528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-02-18 10:45:57.010  INFO 12528 --- [http-nio-8080-exec-1] c.e.d.d.s.i.UserServiceImpl              : Getting all users...
-2023-02-18 11:16:38.758  INFO 4236 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 4236 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
-2023-02-18 11:16:38.771  INFO 4236 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-02-18 11:16:41.667  INFO 4236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-18 11:16:41.853  INFO 4236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 4 JPA repository interfaces.
-2023-02-18 11:16:43.508  INFO 4236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-18 11:16:43.535  INFO 4236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-18 11:16:43.537  INFO 4236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-02-18 11:16:43.891  INFO 4236 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-18 11:16:43.892  INFO 4236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4907 ms
-2023-02-18 11:16:44.385  INFO 4236 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-18 11:16:44.534  INFO 4236 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-02-18 11:16:44.955  INFO 4236 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-18 11:16:45.161  INFO 4236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-18 11:16:45.786  INFO 4236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-18 11:16:45.825  INFO 4236 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-02-18 11:16:47.245  INFO 4236 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.example.demo.demoapi.entity.Subscription (class must be instantiated by Interceptor)
-2023-02-18 11:16:47.645  INFO 4236 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-18 11:16:47.658  INFO 4236 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-18 11:16:48.987  WARN 4236 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionController' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\resource\SubscriptionController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionServiceImpl' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\services\implementation\SubscriptionServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-2023-02-18 11:16:48.990  INFO 4236 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-02-18 11:16:49.036  INFO 4236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-02-18 11:16:49.059  INFO 4236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-02-18 11:16:49.062  INFO 4236 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-02-18 11:16:49.092  INFO 4236 --- [main] ConditionEvaluationReportLoggingListener : 
+2023-02-24 11:30:01.112  INFO 10436 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 10436 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-24 11:30:01.121  INFO 10436 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-02-24 11:30:02.699  INFO 10436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-24 11:30:02.818  INFO 10436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 4 JPA repository interfaces.
+2023-02-24 11:30:03.847  INFO 10436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-24 11:30:03.861  INFO 10436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-24 11:30:03.862  INFO 10436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-24 11:30:04.083  INFO 10436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-24 11:30:04.084  INFO 10436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2884 ms
+2023-02-24 11:30:04.369  INFO 10436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24 11:30:04.456  INFO 10436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-24 11:30:04.724  INFO 10436 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-24 11:30:04.881  INFO 10436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-24 11:30:05.082  INFO 10436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-24 11:30:05.100  INFO 10436 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-24 11:30:06.228  INFO 10436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24 11:30:06.235  INFO 10436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 11:30:07.150  INFO 10436 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-24 11:30:07.172  INFO 10436 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-24 11:30:07.173  INFO 10436 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-24 11:30:07.175  INFO 10436 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-24 11:30:07.177  INFO 10436 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-02-18 11:16:49.170 ERROR 4236 --- [main] o.s.boot.SpringApplication               : Application run failed
+2023-02-24 11:30:07.178  INFO 10436 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-24 11:30:07.178  INFO 10436 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-24 11:30:07.179  INFO 10436 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@445b4594
+2023-02-24 11:30:07.502  WARN 10436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-24 11:30:07.969  INFO 10436 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d50b4c4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7860a014, org.springframework.security.web.context.SecurityContextPersistenceFilter@39d37da8, org.springframework.security.web.header.HeaderWriterFilter@615b1baf, org.springframework.security.web.authentication.logout.LogoutFilter@c040c8d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@19439ec4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b8601a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f7a7ce6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@86e8469, org.springframework.security.web.session.SessionManagementFilter@3a7f382, org.springframework.security.web.access.ExceptionTranslationFilter@70ebaa1e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51d41b97]
+2023-02-24 11:30:08.447  INFO 10436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-24 11:30:09.194  INFO 10436 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-24 11:30:09.195  INFO 10436 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-24 11:30:09.211  INFO 10436 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 8.715 seconds (JVM running for 9.694)
+2023-02-24 11:30:09.397  INFO 10436 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : started job
+2023-02-24 11:30:12.103  INFO 10436 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : started job
+2023-02-24 11:30:17.121  INFO 10436 --- [createSchedulerFactory_Worker-3] c.e.d.d.s.i.SubscriptionServiceImpl      : started job
+2023-02-24 11:30:22.131  INFO 10436 --- [createSchedulerFactory_Worker-4] c.e.d.d.s.i.SubscriptionServiceImpl      : started job
+2023-02-24 11:30:27.109  INFO 10436 --- [createSchedulerFactory_Worker-5] c.e.d.d.s.i.SubscriptionServiceImpl      : started job
+2023-02-24 11:30:32.109  INFO 10436 --- [createSchedulerFactory_Worker-6] c.e.d.d.s.i.SubscriptionServiceImpl      : started job
+2023-02-24 11:30:37.109  INFO 10436 --- [createSchedulerFactory_Worker-7] c.e.d.d.s.i.SubscriptionServiceImpl      : started job
+2023-02-24 11:30:39.643  INFO 10436 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-24 11:30:39.661  INFO 10436 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-02-24 11:30:39.662  INFO 10436 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-02-24 11:30:39.663  INFO 10436 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-24 11:30:59.115  INFO 10436 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-02-24 11:30:59.119  INFO 10436 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 11:30:59.121  INFO 10436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-24 11:30:59.128  INFO 10436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-24 11:32:46.641  INFO 16200 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 16200 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-24 11:32:46.646  INFO 16200 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-02-24 11:32:48.268  INFO 16200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-24 11:32:48.383  INFO 16200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 4 JPA repository interfaces.
+2023-02-24 11:32:49.380  INFO 16200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-24 11:32:49.394  INFO 16200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-24 11:32:49.395  INFO 16200 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-24 11:32:49.613  INFO 16200 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-24 11:32:49.614  INFO 16200 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2885 ms
+2023-02-24 11:32:49.873  INFO 16200 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24 11:32:49.947  INFO 16200 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-24 11:32:50.199  INFO 16200 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-24 11:32:50.315  INFO 16200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-24 11:32:50.577  INFO 16200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-24 11:32:50.600  INFO 16200 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-24 11:32:51.577  INFO 16200 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24 11:32:51.586  INFO 16200 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 11:32:52.619  INFO 16200 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-24 11:32:52.637  INFO 16200 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-24 11:32:52.637  INFO 16200 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-24 11:32:52.638  INFO 16200 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-24 11:32:52.640  INFO 16200 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionController' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\resource\SubscriptionController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionServiceImpl' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\services\implementation\SubscriptionServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
-	at com.example.demo.demoapi.DemoApiApplication.main(DemoApiApplication.java:18) ~[classes/:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionServiceImpl' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\services\implementation\SubscriptionServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.23.jar:5.3.23]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.23.jar:5.3.23]
-	... 33 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:583) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
-	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
-	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:233) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:182) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:165) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:76) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:325) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
-	... 44 common frames omitted
-
-2023-02-18 11:17:21.429  INFO 15096 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 15096 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
-2023-02-18 11:17:21.439  INFO 15096 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-02-18 11:17:23.905  INFO 15096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-18 11:17:24.105  INFO 15096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 180 ms. Found 4 JPA repository interfaces.
-2023-02-18 11:17:25.708  INFO 15096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-18 11:17:25.731  INFO 15096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-18 11:17:25.732  INFO 15096 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-02-18 11:17:26.063  INFO 15096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-18 11:17:26.064  INFO 15096 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4491 ms
-2023-02-18 11:17:26.408  INFO 15096 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-18 11:17:26.526  INFO 15096 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-02-18 11:17:26.941  INFO 15096 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-18 11:17:27.184  INFO 15096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-18 11:17:27.573  INFO 15096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-18 11:17:27.605  INFO 15096 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-02-18 11:17:28.636  INFO 15096 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.example.demo.demoapi.entity.Subscription (class must be instantiated by Interceptor)
-2023-02-18 11:17:28.925  INFO 15096 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-18 11:17:28.939  INFO 15096 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-18 11:17:30.176  WARN 15096 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionController' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\resource\SubscriptionController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionServiceImpl' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\services\implementation\SubscriptionServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-2023-02-18 11:17:30.179  INFO 15096 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-02-18 11:17:30.182  INFO 15096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-02-18 11:17:30.198  INFO 15096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-02-18 11:17:30.207  INFO 15096 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-02-18 11:17:30.237  INFO 15096 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-02-18 11:17:30.284 ERROR 15096 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionController' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\resource\SubscriptionController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionServiceImpl' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\services\implementation\SubscriptionServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
-	at com.example.demo.demoapi.DemoApiApplication.main(DemoApiApplication.java:18) ~[classes/:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionServiceImpl' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\services\implementation\SubscriptionServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.23.jar:5.3.23]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.23.jar:5.3.23]
-	... 33 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:583) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
-	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
-	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:233) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:182) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:165) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:76) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:325) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
-	... 44 common frames omitted
-
-2023-02-18 11:18:29.048  INFO 16084 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 16084 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
-2023-02-18 11:18:29.053  INFO 16084 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-02-18 11:18:31.034  INFO 16084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-18 11:18:31.201  INFO 16084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 4 JPA repository interfaces.
-2023-02-18 11:18:32.779  INFO 16084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-18 11:18:32.802  INFO 16084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-18 11:18:32.803  INFO 16084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-02-18 11:18:33.074  INFO 16084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-18 11:18:33.075  INFO 16084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3922 ms
-2023-02-18 11:18:33.400  INFO 16084 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-18 11:18:33.502  INFO 16084 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-02-18 11:18:33.924  INFO 16084 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-18 11:18:34.200  INFO 16084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-18 11:18:34.625  INFO 16084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-18 11:18:34.658  INFO 16084 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-02-18 11:18:35.499  INFO 16084 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.example.demo.demoapi.entity.Subscription (class must be instantiated by Interceptor)
-2023-02-18 11:18:35.793  INFO 16084 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-18 11:18:35.801  INFO 16084 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-18 11:18:36.924  WARN 16084 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionController' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\resource\SubscriptionController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionServiceImpl' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\services\implementation\SubscriptionServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-2023-02-18 11:18:36.927  INFO 16084 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-02-18 11:18:36.931  INFO 16084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-02-18 11:18:36.948  INFO 16084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-02-18 11:18:36.952  INFO 16084 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-02-18 11:18:36.976  INFO 16084 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-02-18 11:18:37.016 ERROR 16084 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionController' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\resource\SubscriptionController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionServiceImpl' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\services\implementation\SubscriptionServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.23.jar:5.3.23]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
-	at com.example.demo.demoapi.DemoApiApplication.main(DemoApiApplication.java:18) ~[classes/:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subscriptionServiceImpl' defined in file [C:\Users\Korisnik\Desktop\Java\demo-api\target\classes\com\example\demo\demoapi\services\implementation\SubscriptionServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.23.jar:5.3.23]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'subscriptionRepository' defined in com.example.demo.demoapi.repositories.SubscriptionRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.23.jar:5.3.23]
-	... 33 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.lang.Long
-	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:583) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
-	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
-	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:233) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:182) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:165) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:76) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:325) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.7.5.jar:2.7.5]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.5.jar:2.7.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
-	... 44 common frames omitted
-
-2023-02-18 11:21:05.135  INFO 16272 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 16272 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
-2023-02-18 11:21:05.140  INFO 16272 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-02-18 11:21:06.390  INFO 16272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-18 11:21:06.511  INFO 16272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 4 JPA repository interfaces.
-2023-02-18 11:21:07.567  INFO 16272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-18 11:21:07.579  INFO 16272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-18 11:21:07.579  INFO 16272 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-02-18 11:21:07.736  INFO 16272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-18 11:21:07.737  INFO 16272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2531 ms
-2023-02-18 11:21:07.955  INFO 16272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-18 11:21:08.018  INFO 16272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-02-18 11:21:08.242  INFO 16272 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-18 11:21:08.367  INFO 16272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-18 11:21:08.588  INFO 16272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-18 11:21:08.606  INFO 16272 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-02-18 11:21:09.254  INFO 16272 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.example.demo.demoapi.entity.Subscription (class must be instantiated by Interceptor)
-2023-02-18 11:21:09.489  INFO 16272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-18 11:21:09.497  INFO 16272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-18 11:21:10.422  WARN 16272 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-18 11:21:10.855  INFO 16272 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3857c5d5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@237824b0, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a532271, org.springframework.security.web.header.HeaderWriterFilter@220d7eb7, org.springframework.security.web.authentication.logout.LogoutFilter@78a7fccd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@12e13abd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c000c2f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c7ac998, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52a8f789, org.springframework.security.web.session.SessionManagementFilter@62f3ad90, org.springframework.security.web.access.ExceptionTranslationFilter@923bf67, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59301546]
-2023-02-18 11:21:11.267  INFO 16272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-18 11:21:11.813  INFO 16272 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 7.355 seconds (JVM running for 8.008)
-2023-02-18 11:22:33.102  INFO 16272 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-02-18 11:22:33.103  INFO 16272 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-02-18 11:22:33.105  INFO 16272 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-02-18 11:22:33.961  WARN 16272 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for POST /demoApi/v1/subscribe/create/1
-2023-02-18 11:23:06.356  WARN 16272 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for POST /demoApi/v1/subscribe/create/7
-2023-02-18 11:23:20.933  INFO 16272 --- [http-nio-8080-exec-4] c.e.d.d.s.i.UserServiceImpl              : Getting all users...
-2023-02-18 11:24:03.116  INFO 15596 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 15596 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
-2023-02-18 11:24:03.119  INFO 15596 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-02-18 11:24:04.314  INFO 15596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-18 11:24:04.428  INFO 15596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 4 JPA repository interfaces.
-2023-02-18 11:24:05.396  INFO 15596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-18 11:24:05.410  INFO 15596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-18 11:24:05.411  INFO 15596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-02-18 11:24:05.578  INFO 15596 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-18 11:24:05.579  INFO 15596 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2391 ms
-2023-02-18 11:24:05.780  INFO 15596 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-18 11:24:05.841  INFO 15596 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-02-18 11:24:06.079  INFO 15596 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-18 11:24:06.199  INFO 15596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-18 11:24:06.402  INFO 15596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-18 11:24:06.424  INFO 15596 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-02-18 11:24:07.010  INFO 15596 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.example.demo.demoapi.entity.Subscription (class must be instantiated by Interceptor)
-2023-02-18 11:24:07.254  INFO 15596 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-18 11:24:07.262  INFO 15596 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-18 11:24:08.229  WARN 15596 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-18 11:24:08.670  INFO 15596 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52a8f789, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5345552f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f6936cc, org.springframework.security.web.header.HeaderWriterFilter@193792e6, org.springframework.security.web.authentication.logout.LogoutFilter@4e7b89b6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6e0dec27, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ac26092, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@308e465b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55ba4bff, org.springframework.security.web.session.SessionManagementFilter@35b38986, org.springframework.security.web.access.ExceptionTranslationFilter@1eda12b3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@363d29dd]
-2023-02-18 11:24:09.118  INFO 15596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-18 11:24:09.680  INFO 15596 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 7.129 seconds (JVM running for 7.716)
-2023-02-18 11:24:17.705  INFO 15596 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-24 11:32:52.640  INFO 16200 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-24 11:32:52.640  INFO 16200 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-24 11:32:52.640  INFO 16200 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@3a5ffea
+2023-02-24 11:32:53.038  WARN 16200 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-24 11:32:53.527  INFO 16200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@86e8469, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76b6bad3, org.springframework.security.web.context.SecurityContextPersistenceFilter@1de6689c, org.springframework.security.web.header.HeaderWriterFilter@108d59b6, org.springframework.security.web.authentication.logout.LogoutFilter@4917992b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@21ebf9be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46f597f1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a045e85, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e38d655, org.springframework.security.web.session.SessionManagementFilter@554a2f3, org.springframework.security.web.access.ExceptionTranslationFilter@65dafe50, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@27260f9c]
+2023-02-24 11:32:54.305  INFO 16200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-24 11:32:54.962  INFO 16200 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-24 11:32:54.962  INFO 16200 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-24 11:32:54.986  INFO 16200 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 8.872 seconds (JVM running for 9.52)
+2023-02-24 11:32:55.153  INFO 16200 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-24 12:32:52.584  INFO 16200 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-24 15:41:36.043  WARN 16200 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h6m51s390ms803µs200ns).
+2023-02-24 16:32:52.585  INFO 16200 --- [createSchedulerFactory_Worker-3] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-24 16:33:12.716  INFO 16200 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-24 16:33:12.744  INFO 16200 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-02-24 16:33:12.744  INFO 16200 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-02-24 16:33:12.745  INFO 16200 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-24 16:33:13.146  INFO 16200 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-02-24 16:33:13.148  INFO 16200 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 16:33:13.150  INFO 16200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-24 16:33:13.153  INFO 16200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
