@@ -28,10 +28,4 @@ public class SubscriptionController {
         subscriptionService.save(userId, subscribeRequest);
     }
 
-    @GetMapping("/send")
-    public ResponseEntity sendWeatherInformation() {
-        subscriptionService.sendWeatherInformation();
-        return ResponseEntity.ok("Email with weather information is sent");
-    }
-
 }

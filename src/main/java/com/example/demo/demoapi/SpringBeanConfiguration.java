@@ -40,10 +40,8 @@ public class SpringBeanConfiguration {
 
 
     @Bean
-    public SimpleTriggerFactoryBean
-    createSimpleTriggerFactoryBean(JobDetail jobDetail) {
-        SimpleTriggerFactoryBean simpleTriggerFactory
-                = new SimpleTriggerFactoryBean();
+    public SimpleTriggerFactoryBean createSimpleTriggerFactoryBean(JobDetail jobDetail) {
+        SimpleTriggerFactoryBean simpleTriggerFactory = new SimpleTriggerFactoryBean();
 
         simpleTriggerFactory.setJobDetail(jobDetail);
         simpleTriggerFactory.setStartDelay(0);
@@ -54,27 +52,20 @@ public class SpringBeanConfiguration {
 
     @Bean
     public JobDetailFactoryBean createJobDetailFactoryBean() {
-
-        JobDetailFactoryBean jobDetailFactory
-                = new JobDetailFactoryBean();
+        JobDetailFactoryBean jobDetailFactory = new JobDetailFactoryBean();
         jobDetailFactory.setJobClass(SendEmailJob.class);
         return jobDetailFactory;
     }
 
     @Bean
     SpringBeanJobFactory createSpringBeanJobFactory() {
-
         return new SpringBeanJobFactory() {
-
             @Override
-            protected Object createJobInstance
-                    (final TriggerFiredBundle bundle) throws Exception {
+            protected Object createJobInstance(final TriggerFiredBundle bundle) throws Exception {
 
                 final Object job = super.createJobInstance(bundle);
 
-                applicationContext
-                        .getAutowireCapableBeanFactory()
-                        .autowireBean(job);
+                applicationContext.getAutowireCapableBeanFactory().autowireBean(job);
 
                 return job;
             }
@@ -82,11 +73,9 @@ public class SpringBeanConfiguration {
     }
 
     @Bean
-    public SchedulerFactoryBean createSchedulerFactory
-            (SpringBeanJobFactory springBeanJobFactory, Trigger trigger) {
+    public SchedulerFactoryBean createSchedulerFactory(SpringBeanJobFactory springBeanJobFactory, Trigger trigger) {
 
-        SchedulerFactoryBean schedulerFactory
-                = new SchedulerFactoryBean();
+        SchedulerFactoryBean schedulerFactory = new SchedulerFactoryBean();
         schedulerFactory.setAutoStartup(true);
         schedulerFactory.setWaitForJobsToCompleteOnShutdown(true);
         schedulerFactory.setTriggers(trigger);
