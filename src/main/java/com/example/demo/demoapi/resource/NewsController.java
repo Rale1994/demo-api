@@ -1,10 +1,11 @@
-package com.example.demo.demoapi.controller;
+package com.example.demo.demoapi.resource;
 
-import com.example.demo.demoapi.dtos.request.NewsRequestDTO;
-import com.example.demo.demoapi.dtos.request.NewsUpdateRequestDTO;
+import com.example.demo.demoapi.dtos.request.NewsRequest;
+import com.example.demo.demoapi.dtos.request.NewsUpdateRequest;
 import com.example.demo.demoapi.dtos.response.NewsResponseDTO;
 import com.example.demo.demoapi.entity.News;
 import com.example.demo.demoapi.services.NewsService;
+import com.example.demo.demoapi.shared.Constants;
 import com.querydsl.core.types.Predicate;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("news")
+@RequestMapping(Constants.BASE_URL+"news")
 @Api
 public class NewsController {
 
@@ -34,8 +35,8 @@ public class NewsController {
     }
 
     @PostMapping
-    public NewsResponseDTO create(@Valid @RequestBody NewsRequestDTO newsRequestDTO) {
-        return newsService.create(newsRequestDTO);
+    public NewsResponseDTO create(@Valid @RequestBody NewsRequest newsRequest) {
+        return newsService.create(newsRequest);
        }
 
     @GetMapping
@@ -45,8 +46,8 @@ public class NewsController {
     }
 
     @PutMapping(path = "/{id}")
-    public NewsResponseDTO update(@PathVariable long id, @RequestBody NewsUpdateRequestDTO newsUpdateRequestDTO) {
-        return newsService.update(id, newsUpdateRequestDTO);
+    public NewsResponseDTO update(@PathVariable long id, @RequestBody NewsUpdateRequest newsUpdateRequest) {
+        return newsService.update(id, newsUpdateRequest);
     }
 
 

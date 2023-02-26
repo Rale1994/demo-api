@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-public class UserDetailsRequestDTO {
+public class UserDetailsRequest {
 
     @NotNull(message = "First name is required")
     private String firstName;

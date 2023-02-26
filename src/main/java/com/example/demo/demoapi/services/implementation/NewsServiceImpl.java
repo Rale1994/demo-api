@@ -1,7 +1,7 @@
 package com.example.demo.demoapi.services.implementation;
 
-import com.example.demo.demoapi.dtos.request.NewsRequestDTO;
-import com.example.demo.demoapi.dtos.request.NewsUpdateRequestDTO;
+import com.example.demo.demoapi.dtos.request.NewsRequest;
+import com.example.demo.demoapi.dtos.request.NewsUpdateRequest;
 import com.example.demo.demoapi.dtos.response.NewsResponseDTO;
 import com.example.demo.demoapi.dtos.response.UserNewsResponseDTO;
 import com.example.demo.demoapi.entity.News;
@@ -45,10 +45,10 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
-    public NewsResponseDTO create(NewsRequestDTO newsRequestDTO) {
-        Optional<User> userOptional = userRepository.findById(newsRequestDTO.getUsersId());
+    public NewsResponseDTO create(NewsRequest newsRequest) {
+        Optional<User> userOptional = userRepository.findById(newsRequest.getUsersId());
         if (!userOptional.isPresent()) {
-            throw new ApiRequestException("User with id: " + newsRequestDTO.getUsersId() + " does not exist!");
+            throw new ApiRequestException("User with id: " + newsRequest.getUsersId() + " does not exist!");
         }
         User user = userOptional.get();
 
@@ -56,12 +56,12 @@ public class NewsServiceImpl implements NewsService {
         userNewsResponseDTO.setFirstName(user.getFirstName());
         userNewsResponseDTO.setLastName(user.getLastName());
 
-        News news = modelMapper.map(newsRequestDTO, News.class);
+        News news = modelMapper.map(newsRequest, News.class);
 
-        if (newsRequestDTO.getCreatedDate() == null) {
+        if (newsRequest.getCreatedDate() == null) {
             news.setCreatedDate(LocalDateTime.now());
         } else {
-            news.setCreatedDate(newsRequestDTO.getCreatedDate());
+            news.setCreatedDate(newsRequest.getCreatedDate());
         }
         news.setUser(user);
 
@@ -72,7 +72,7 @@ public class NewsServiceImpl implements NewsService {
 
 
     @Override
-    public NewsResponseDTO update(long id, NewsUpdateRequestDTO newsUpdateRequestDTO) {
+    public NewsResponseDTO update(long id, NewsUpdateRequest newsUpdateRequest) {
         Optional<News> newsOptional = newsRepository.findById(id);
 
         if (!newsOptional.isPresent()) {
@@ -81,13 +81,13 @@ public class NewsServiceImpl implements NewsService {
 
         News news = newsOptional.get();
 
-        if (newsUpdateRequestDTO.getUpdatedDate() == null) {
+        if (newsUpdateRequest.getUpdatedDate() == null) {
             news.setUpdatedDate(LocalDateTime.now());
         } else {
-            news.setUpdatedDate(newsUpdateRequestDTO.getUpdatedDate());
+            news.setUpdatedDate(newsUpdateRequest.getUpdatedDate());
         }
 
-        news.setTitle(newsUpdateRequestDTO.getTitle());
+        news.setTitle(newsUpdateRequest.getTitle());
 
         News updatedNews = newsRepository.save(news);
 

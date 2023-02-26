@@ -1,7 +1,7 @@
 package com.example.demo.demoapi.services.implementation;
 
-import com.example.demo.demoapi.dtos.request.NewsRequestDTO;
-import com.example.demo.demoapi.dtos.request.NewsUpdateRequestDTO;
+import com.example.demo.demoapi.dtos.request.NewsRequest;
+import com.example.demo.demoapi.dtos.request.NewsUpdateRequest;
 import com.example.demo.demoapi.dtos.response.NewsResponseDTO;
 import com.example.demo.demoapi.dtos.response.UserNewsResponseDTO;
 import com.example.demo.demoapi.entity.News;
@@ -73,9 +73,9 @@ class NewsServiceImplementationTest {
     @Test
     void testCreateNews() {
         // GIVEN
-        NewsRequestDTO newsRequestDTO = new NewsRequestDTO();
-        newsRequestDTO.setTitle("TITLE1");
-        newsRequestDTO.setUsersId(2221167);
+        NewsRequest newsRequest = new NewsRequest();
+        newsRequest.setTitle("TITLE1");
+        newsRequest.setUsersId(2221167);
 
         User user = new User();
         user.setFirstName("RADOS");
@@ -83,18 +83,18 @@ class NewsServiceImplementationTest {
 
         UserNewsResponseDTO userNewsResponseDTO = new UserNewsResponseDTO(user);
 
-        News news = new News(newsRequestDTO);
+        News news = new News(newsRequest);
 
         NewsResponseDTO newsResponseDTO = new NewsResponseDTO(news);
 
         // WHEN
-        when(userRepository.findById(newsRequestDTO.getUsersId())).thenReturn(Optional.of(user));
-        when(modelMapper.map(newsRequestDTO, News.class)).thenReturn(news);
+        when(userRepository.findById(newsRequest.getUsersId())).thenReturn(Optional.of(user));
+        when(modelMapper.map(newsRequest, News.class)).thenReturn(news);
         when(newsRepository.save(news)).thenReturn(news);
         when(modelMapper.map(news, NewsResponseDTO.class)).thenReturn(newsResponseDTO);
 
         // ACTION
-        NewsResponseDTO response = newsService.create(newsRequestDTO);
+        NewsResponseDTO response = newsService.create(newsRequest);
 
         // THEN
         assertNotNull(response);
@@ -103,25 +103,25 @@ class NewsServiceImplementationTest {
     @Test
     void testCreateNewsWithUserWhoDoesNotExist() {
         // GIVEN
-        NewsRequestDTO newsRequestDTO = createNewsRequestDTO();
+        NewsRequest newsRequest = createNewsRequestDTO();
 
         User user = new User();
         user.setFirstName("RADOS");
         user.setLastName("GOLUBOVIC");
 
         // WHEN
-        when(userRepository.findById(newsRequestDTO.getUsersId())).thenReturn(Optional.empty());
+        when(userRepository.findById(newsRequest.getUsersId())).thenReturn(Optional.empty());
 
         //THEN
-        assertThrows(ApiRequestException.class, () -> newsService.create(newsRequestDTO));
+        assertThrows(ApiRequestException.class, () -> newsService.create(newsRequest));
     }
 
     @Test
     void testCreateUserWithInsertedDate() {
         // GIVEN
-        NewsRequestDTO newsRequestDTO = createNewsRequestDTO();
+        NewsRequest newsRequest = createNewsRequestDTO();
         LocalDateTime dateTime = dateTimeFormatterFromString("2022-12-08 09:42:51");
-        newsRequestDTO.setCreatedDate(dateTime);
+        newsRequest.setCreatedDate(dateTime);
 
         User user = new User();
         user.setFirstName("RADOS");
@@ -129,18 +129,18 @@ class NewsServiceImplementationTest {
 
         UserNewsResponseDTO userNewsResponseDTO = new UserNewsResponseDTO(user);
 
-        News news = new News(newsRequestDTO);
+        News news = new News(newsRequest);
 
         NewsResponseDTO newsResponseDTO = new NewsResponseDTO(news);
 
         // WHEN
-        when(userRepository.findById(newsRequestDTO.getUsersId())).thenReturn(Optional.of(user));
-        when(modelMapper.map(newsRequestDTO, News.class)).thenReturn(news);
+        when(userRepository.findById(newsRequest.getUsersId())).thenReturn(Optional.of(user));
+        when(modelMapper.map(newsRequest, News.class)).thenReturn(news);
         when(newsRepository.save(news)).thenReturn(news);
         when(modelMapper.map(news, NewsResponseDTO.class)).thenReturn(newsResponseDTO);
 
         // ACTION
-        NewsResponseDTO response = newsService.create(newsRequestDTO);
+        NewsResponseDTO response = newsService.create(newsRequest);
 
         // THEN
         assertNotNull(response);
@@ -149,7 +149,7 @@ class NewsServiceImplementationTest {
     @Test
     void testUpdateNews() {
         // GIVE
-        NewsUpdateRequestDTO updateRequestDTO = new NewsUpdateRequestDTO();
+        NewsUpdateRequest updateRequestDTO = new NewsUpdateRequest();
         updateRequestDTO.setTitle("TITLE UPDATED");
         News news = new News(updateRequestDTO);
         news.setId(123123124412L);
@@ -171,7 +171,7 @@ class NewsServiceImplementationTest {
     @Test
     void testUpdateUserSetUpdatedDate() {
         // GIVE
-        NewsUpdateRequestDTO updateRequestDTO = new NewsUpdateRequestDTO();
+        NewsUpdateRequest updateRequestDTO = new NewsUpdateRequest();
         updateRequestDTO.setTitle("TITLE UPDATED");
         LocalDateTime dateTime = dateTimeFormatterFromString("2022-12-08 09:42:51");
         updateRequestDTO.setUpdatedDate(dateTime);
@@ -196,7 +196,7 @@ class NewsServiceImplementationTest {
     @Test
     void testUpdateNewsWhichDoesNotExist() {
         // GIVE
-        NewsUpdateRequestDTO updateRequestDTO = new NewsUpdateRequestDTO();
+        NewsUpdateRequest updateRequestDTO = new NewsUpdateRequest();
         updateRequestDTO.setTitle("TITLE NOT UPDATED");
         updateRequestDTO.setUpdatedDate(LocalDateTime.now());
         News news = new News(updateRequestDTO);
@@ -221,12 +221,12 @@ class NewsServiceImplementationTest {
         return news;
     }
 
-    private NewsRequestDTO createNewsRequestDTO() {
-        NewsRequestDTO newsRequestDTO = new NewsRequestDTO();
-        newsRequestDTO.setTitle("TITLE1");
-        newsRequestDTO.setCreatedDate(LocalDateTime.now());
-        newsRequestDTO.setUsersId(2221167);
-        return newsRequestDTO;
+    private NewsRequest createNewsRequestDTO() {
+        NewsRequest newsRequest = new NewsRequest();
+        newsRequest.setTitle("TITLE1");
+        newsRequest.setCreatedDate(LocalDateTime.now());
+        newsRequest.setUsersId(2221167);
+        return newsRequest;
     }
 
     private LocalDateTime dateTimeFormatterFromString(String date) {

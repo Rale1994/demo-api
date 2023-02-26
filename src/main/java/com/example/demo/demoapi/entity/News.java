@@ -1,7 +1,7 @@
 package com.example.demo.demoapi.entity;
 
-import com.example.demo.demoapi.dtos.request.NewsRequestDTO;
-import com.example.demo.demoapi.dtos.request.NewsUpdateRequestDTO;
+import com.example.demo.demoapi.dtos.request.NewsRequest;
+import com.example.demo.demoapi.dtos.request.NewsUpdateRequest;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,17 +29,17 @@ public class News {
     @JoinColumn(name = "usersId")
     private User user;
 
-    public News(NewsRequestDTO newsRequestDTO) {
-        this.title=newsRequestDTO.getTitle();
-        this.createdDate= newsRequestDTO.getCreatedDate();
+    public News(NewsRequest newsRequest) {
+        this.title= newsRequest.getTitle();
+        this.createdDate= newsRequest.getCreatedDate();
         this.updatedDate=createdDate;
         User user= new User();
-        user.setId(newsRequestDTO.getUsersId());
+        user.setId(newsRequest.getUsersId());
         this.user=user;
     }
 
-    public News(NewsUpdateRequestDTO newsUpdateRequestDTO) {
-        this.title=newsUpdateRequestDTO.getTitle();
-        this.updatedDate=newsUpdateRequestDTO.getUpdatedDate();
+    public News(NewsUpdateRequest newsUpdateRequest) {
+        this.title= newsUpdateRequest.getTitle();
+        this.updatedDate= newsUpdateRequest.getUpdatedDate();
     }
 }

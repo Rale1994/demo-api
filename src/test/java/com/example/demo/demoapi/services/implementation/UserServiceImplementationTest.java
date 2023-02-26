@@ -1,6 +1,6 @@
 package com.example.demo.demoapi.services.implementation;
 
-import com.example.demo.demoapi.dtos.request.UserDetailsRequestDTO;
+import com.example.demo.demoapi.dtos.request.UserDetailsRequest;
 import com.example.demo.demoapi.dtos.response.UserResponseDTO;
 import com.example.demo.demoapi.exceptions.ApiRequestException;
 import com.example.demo.demoapi.repositories.UserRepository;
@@ -50,21 +50,21 @@ class UserServiceImplementationTest {
     @Test
     void canCreateUser() {
         // GIVEN
-        UserDetailsRequestDTO userDetailsRequestDTO = createUserRequestModel();
+        UserDetailsRequest userDetailsRequest = createUserRequestModel();
 
-        User user = new User(userDetailsRequestDTO);
+        User user = new User(userDetailsRequest);
         user.setId(12345121313L);
         UserResponseDTO response = new UserResponseDTO(user);
 
         //WHEN
-        when(userRepository.findByEmail(userDetailsRequestDTO.getEmail())).thenReturn(Optional.empty());
-        when(passwordEncoder.encode(userDetailsRequestDTO.getPassword())).thenReturn("rale");
-        when(modelMapper.map(userDetailsRequestDTO, User.class)).thenReturn(user);
+        when(userRepository.findByEmail(userDetailsRequest.getEmail())).thenReturn(Optional.empty());
+        when(passwordEncoder.encode(userDetailsRequest.getPassword())).thenReturn("rale");
+        when(modelMapper.map(userDetailsRequest, User.class)).thenReturn(user);
         when(userRepository.save(user)).thenReturn(user);
         when(modelMapper.map(user, UserResponseDTO.class)).thenReturn(response);
 
         //ACTION
-        UserResponseDTO actual = userService.create(userDetailsRequestDTO);
+        UserResponseDTO actual = userService.create(userDetailsRequest);
 
         //THEN
         assertNotNull(actual);
@@ -75,14 +75,14 @@ class UserServiceImplementationTest {
     @Test
     void canCreateUserWithSameEmail() {
         // GIVEN
-        UserDetailsRequestDTO userDetailsRequestDTO = createUserRequestModel();
-        User user = new User(userDetailsRequestDTO);
+        UserDetailsRequest userDetailsRequest = createUserRequestModel();
+        User user = new User(userDetailsRequest);
 
         // WHEN
-        when(userRepository.findByEmail(userDetailsRequestDTO.getEmail())).thenReturn(Optional.of(user));
+        when(userRepository.findByEmail(userDetailsRequest.getEmail())).thenReturn(Optional.of(user));
 
         // THEN
-        assertThrows(ApiRequestException.class, () -> userService.create(userDetailsRequestDTO));
+        assertThrows(ApiRequestException.class, () -> userService.create(userDetailsRequest));
     }
 
     @Test
@@ -143,7 +143,7 @@ class UserServiceImplementationTest {
         // GIVEN
         User user = createUser();
 
-        UserDetailsRequestDTO userRequest = new UserDetailsRequestDTO();
+        UserDetailsRequest userRequest = new UserDetailsRequest();
         userRequest.setFirstName("FIRST NAME");
 
         UserResponseDTO userResponseDTO = new UserResponseDTO();
@@ -171,7 +171,7 @@ class UserServiceImplementationTest {
     void tryToUpdateUserLastNameWithoutFirstNameAndEmail() {
         // GIVEN
         User user = createUser();
-        UserDetailsRequestDTO userRequest = new UserDetailsRequestDTO();
+        UserDetailsRequest userRequest = new UserDetailsRequest();
         userRequest.setLastName("LAST NAME");
 
         UserResponseDTO userResponseDTO = new UserResponseDTO();
@@ -198,7 +198,7 @@ class UserServiceImplementationTest {
     void tryToUpdateUserEmailWithoutFirstNameAndLastName() {
         // GIVEN
         User user = createUser();
-        UserDetailsRequestDTO userRequest = new UserDetailsRequestDTO();
+        UserDetailsRequest userRequest = new UserDetailsRequest();
         userRequest.setEmail("email@example");
 
         UserResponseDTO userResponseDTO = new UserResponseDTO();
@@ -255,15 +255,15 @@ class UserServiceImplementationTest {
     }
 
 
-    private UserDetailsRequestDTO createUserRequestModel() {
-        UserDetailsRequestDTO userDetailsRequestDTO = new UserDetailsRequestDTO();
-        userDetailsRequestDTO.setEmail("radosmailmail@gmail.com");
-        userDetailsRequestDTO.setFirstName("RADOSGOLUBOVIC");
-        userDetailsRequestDTO.setLastName("GOLUBOVIC");
-        userDetailsRequestDTO.setUsername("rale");
-        userDetailsRequestDTO.setPassword("rale");
-        userDetailsRequestDTO.setRole("USER");
-        return userDetailsRequestDTO;
+    private UserDetailsRequest createUserRequestModel() {
+        UserDetailsRequest userDetailsRequest = new UserDetailsRequest();
+        userDetailsRequest.setEmail("radosmailmail@gmail.com");
+        userDetailsRequest.setFirstName("RADOSGOLUBOVIC");
+        userDetailsRequest.setLastName("GOLUBOVIC");
+        userDetailsRequest.setUsername("rale");
+        userDetailsRequest.setPassword("rale");
+        userDetailsRequest.setRole("USER");
+        return userDetailsRequest;
     }
 
     private List<User> createUsersList() {
