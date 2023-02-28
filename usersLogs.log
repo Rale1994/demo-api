@@ -1,25 +1,29 @@
-2023-02-25 11:34:00.399  INFO 18036 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 18036 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
-2023-02-25 11:34:00.417  INFO 18036 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-02-25 11:34:03.436  INFO 18036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-25 11:34:03.635  INFO 18036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 177 ms. Found 4 JPA repository interfaces.
-2023-02-25 11:34:05.232  INFO 18036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-25 11:34:05.261  INFO 18036 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-25 11:34:05.261  INFO 18036 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-02-25 11:34:05.584  INFO 18036 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-25 11:34:05.584  INFO 18036 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5006 ms
-2023-02-25 11:34:05.950  INFO 18036 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-25 11:34:06.072  INFO 18036 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-02-25 11:34:06.563  INFO 18036 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-25 11:34:06.846  INFO 18036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-25 11:34:07.240  INFO 18036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-25 11:34:07.278  INFO 18036 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-02-25 11:34:08.882  INFO 18036 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-25 11:34:08.895  INFO 18036 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-25 11:34:10.325  INFO 18036 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2023-02-25 11:34:10.350  INFO 18036 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2023-02-25 11:34:10.351  INFO 18036 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
-2023-02-25 11:34:10.352  INFO 18036 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2023-02-25 11:34:10.353  INFO 18036 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+2023-02-28 09:44:33.738  WARN 1104 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Korisnik/.m2/repository/org/json/json/20180813/json-20180813.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Korisnik/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-28 09:44:33.825  INFO 1104 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Starting SubscriptionServiceImplTest using Java 15.0.2 on DESKTOP-NVAMDEM with PID 1104 (started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-28 09:44:33.827  INFO 1104 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 09:44:36.121  INFO 1104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-28 09:44:36.292  INFO 1104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152 ms. Found 4 JPA repository interfaces.
+2023-02-28 09:44:38.253  INFO 1104 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-28 09:44:38.477  INFO 1104 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-28 09:44:38.975  INFO 1104 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-28 09:44:39.227  INFO 1104 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 09:44:39.588  INFO 1104 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 09:44:39.622  INFO 1104 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-28 09:44:41.230  INFO 1104 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-28 09:44:41.246  INFO 1104 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 09:44:42.909  INFO 1104 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-28 09:44:42.982  INFO 1104 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-28 09:44:42.983  INFO 1104 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-28 09:44:42.985  INFO 1104 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-28 09:44:42.987  INFO 1104 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -27,21 +31,825 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2023-02-25 11:34:10.354  INFO 18036 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
-2023-02-25 11:34:10.354  INFO 18036 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
-2023-02-25 11:34:10.354  INFO 18036 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@6d94a966
-2023-02-25 11:34:10.926  WARN 18036 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-25 11:34:11.790  INFO 18036 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@77902ed6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c0a4f87, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a5c6009, org.springframework.security.web.header.HeaderWriterFilter@1dbb9a4a, org.springframework.security.web.authentication.logout.LogoutFilter@48b744fd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4cc4f6bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2703785e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a7f382, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f5076f9, org.springframework.security.web.session.SessionManagementFilter@a4388f1, org.springframework.security.web.access.ExceptionTranslationFilter@78a0d664, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6768dc74]
-2023-02-25 11:34:12.448  INFO 18036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-25 11:34:13.360  INFO 18036 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2023-02-25 11:34:13.361  INFO 18036 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
-2023-02-25 11:34:13.401  INFO 18036 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 13.83 seconds (JVM running for 15.155)
-2023-02-25 11:34:13.658  INFO 18036 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
-2023-02-25 11:34:45.052  INFO 18036 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
-2023-02-25 11:34:45.076  INFO 18036 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
-2023-02-25 11:34:45.077  INFO 18036 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
-2023-02-25 11:34:45.077  INFO 18036 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
-2023-02-25 11:34:45.507  INFO 18036 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
-2023-02-25 11:34:45.512  INFO 18036 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-02-25 11:34:45.517  INFO 18036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-02-25 11:34:45.533  INFO 18036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 09:44:42.987  INFO 1104 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-28 09:44:42.988  INFO 1104 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-28 09:44:42.988  INFO 1104 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@5364b481
+2023-02-28 09:44:43.788  WARN 1104 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-28 09:44:45.241  INFO 1104 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b235623, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ddc5a75, org.springframework.security.web.context.SecurityContextPersistenceFilter@413e8246, org.springframework.security.web.header.HeaderWriterFilter@698daff6, org.springframework.security.web.authentication.logout.LogoutFilter@5a3d52a0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@53cba89f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@235d46b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1644cc2d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b2114ce, org.springframework.security.web.session.SessionManagementFilter@94b5fe3, org.springframework.security.web.access.ExceptionTranslationFilter@436103b1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57fb6900]
+2023-02-28 09:44:48.571  INFO 1104 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-28 09:44:48.572  INFO 1104 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-28 09:44:48.603  INFO 1104 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Started SubscriptionServiceImplTest in 15.749 seconds (JVM running for 17.948)
+2023-02-28 09:44:49.640  INFO 1104 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : getting user
+2023-02-28 09:44:49.646  INFO 1104 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : creating subscription
+2023-02-28 09:44:49.647  WARN 1104 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : subscribe request not set
+2023-02-28 09:44:49.685  INFO 1104 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : getting user
+2023-02-28 09:44:49.685  WARN 1104 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : user doesn't exist
+2023-02-28 09:44:49.704  INFO 1104 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : getting user
+2023-02-28 09:44:49.705  INFO 1104 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : creating subscription
+2023-02-28 09:44:49.738  INFO 1104 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 09:44:49.751  INFO 1104 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-02-28 09:44:49.752  INFO 1104 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-02-28 09:44:49.752  INFO 1104 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 09:44:50.093  INFO 1104 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-02-28 09:44:50.095  INFO 1104 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 09:44:50.097  INFO 1104 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 09:44:50.113  INFO 1104 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 11:06:41.666  WARN 7956 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Korisnik/.m2/repository/org/json/json/20180813/json-20180813.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Korisnik/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-28 11:06:41.694  INFO 7956 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Starting SubscriptionServiceImplTest using Java 15.0.2 on DESKTOP-NVAMDEM with PID 7956 (started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-28 11:06:41.696  INFO 7956 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 11:06:43.485  INFO 7956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-28 11:06:43.617  INFO 7956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 4 JPA repository interfaces.
+2023-02-28 11:06:44.660  INFO 7956 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-28 11:06:44.736  INFO 7956 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-28 11:06:45.027  INFO 7956 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-28 11:06:45.229  INFO 7956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 11:06:45.461  INFO 7956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 11:06:45.486  INFO 7956 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-28 11:06:46.577  INFO 7956 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-28 11:06:46.587  INFO 7956 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 11:06:47.681  INFO 7956 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-28 11:06:47.703  INFO 7956 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-28 11:06:47.703  INFO 7956 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-28 11:06:47.704  INFO 7956 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-28 11:06:47.706  INFO 7956 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-28 11:06:47.706  INFO 7956 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-28 11:06:47.707  INFO 7956 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-28 11:06:47.709  INFO 7956 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@4d071e4b
+2023-02-28 11:06:48.230  WARN 7956 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-28 11:06:49.129  INFO 7956 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40612056, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a49ce3a, org.springframework.security.web.context.SecurityContextPersistenceFilter@42a89cef, org.springframework.security.web.header.HeaderWriterFilter@d03cdc7, org.springframework.security.web.authentication.logout.LogoutFilter@a4e1ca7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@64f1b2fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f473daf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@390e814c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@518ed9b4, org.springframework.security.web.session.SessionManagementFilter@711261c7, org.springframework.security.web.access.ExceptionTranslationFilter@276eafad, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1dcc0bb8]
+2023-02-28 11:06:51.017  INFO 7956 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-28 11:06:51.018  INFO 7956 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-28 11:06:51.036  INFO 7956 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Started SubscriptionServiceImplTest in 9.822 seconds (JVM running for 11.463)
+2023-02-28 11:06:51.291  INFO 7956 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 11:06:51.511  INFO 7956 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 11:06:51.622  INFO 7956 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 11:06:51.628  INFO 7956 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-02-28 11:06:51.628  INFO 7956 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-02-28 11:06:51.628  INFO 7956 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 11:06:57.620 ERROR 7956 --- [createSchedulerFactory_Worker-1] org.quartz.core.JobRunShell              : Job DEFAULT.createJobDetailFactoryBean threw an unhandled Exception: 
+
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a4-20020a5d5704000000b002c559843748sm9430032wrv.10 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:65) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:59) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a4-20020a5d5704000000b002c559843748sm9430032wrv.10 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 11:06:57.621 ERROR 7956 --- [createSchedulerFactory_Worker-1] org.quartz.core.ErrorLogger              : Job (DEFAULT.createJobDetailFactoryBean threw an exception.
+
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a4-20020a5d5704000000b002c559843748sm9430032wrv.10 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:65) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:59) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	... 1 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a4-20020a5d5704000000b002c559843748sm9430032wrv.10 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 11:06:57.622  INFO 7956 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-02-28 11:06:57.624  INFO 7956 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 11:06:57.626  INFO 7956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 11:06:57.634  INFO 7956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 12:30:04.567  WARN 11132 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Korisnik/.m2/repository/org/json/json/20180813/json-20180813.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Korisnik/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-28 12:30:04.600  INFO 11132 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Starting SubscriptionServiceImplTest using Java 15.0.2 on DESKTOP-NVAMDEM with PID 11132 (started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-28 12:30:04.602  INFO 11132 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 12:30:05.949  INFO 11132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-28 12:30:06.096  INFO 11132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 4 JPA repository interfaces.
+2023-02-28 12:30:07.118  INFO 11132 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-28 12:30:07.181  INFO 11132 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-28 12:30:07.396  INFO 11132 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-28 12:30:07.588  INFO 11132 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 12:30:07.878  INFO 11132 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 12:30:07.904  INFO 11132 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-28 12:30:08.936  INFO 11132 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-28 12:30:08.958  INFO 11132 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:30:10.051  INFO 11132 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-28 12:30:10.072  INFO 11132 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-28 12:30:10.072  INFO 11132 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-28 12:30:10.073  INFO 11132 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-28 12:30:10.074  INFO 11132 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-28 12:30:10.074  INFO 11132 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-28 12:30:10.074  INFO 11132 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-28 12:30:10.075  INFO 11132 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@3bc33ad9
+2023-02-28 12:30:10.576  WARN 11132 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-28 12:30:11.490  INFO 11132 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b44ed3c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1df83569, org.springframework.security.web.context.SecurityContextPersistenceFilter@506654fa, org.springframework.security.web.header.HeaderWriterFilter@7da40bf4, org.springframework.security.web.authentication.logout.LogoutFilter@171b0d3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@21b792c2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e3bc13b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c989d82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@439047ef, org.springframework.security.web.session.SessionManagementFilter@f3e6876, org.springframework.security.web.access.ExceptionTranslationFilter@373c8f35, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c7aac7c]
+2023-02-28 12:30:13.455  INFO 11132 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-28 12:30:13.455  INFO 11132 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-28 12:30:13.478  INFO 11132 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Started SubscriptionServiceImplTest in 9.326 seconds (JVM running for 10.93)
+2023-02-28 12:30:18.474  INFO 11132 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:30:18.523  INFO 11132 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:30:18.531  INFO 11132 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-02-28 12:30:18.531  INFO 11132 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-02-28 12:30:18.531  INFO 11132 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:30:22.942  INFO 11132 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:30:50.055 ERROR 11132 --- [createSchedulerFactory_Worker-1] org.quartz.core.JobRunShell              : Job DEFAULT.createJobDetailFactoryBean threw an unhandled Exception: 
+
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials o25-20020a05600c511900b003dfe549da4fsm17551696wms.18 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:65) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:59) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials o25-20020a05600c511900b003dfe549da4fsm17551696wms.18 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:30:50.058 ERROR 11132 --- [createSchedulerFactory_Worker-1] org.quartz.core.ErrorLogger              : Job (DEFAULT.createJobDetailFactoryBean threw an exception.
+
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials o25-20020a05600c511900b003dfe549da4fsm17551696wms.18 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:65) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:59) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	... 1 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials o25-20020a05600c511900b003dfe549da4fsm17551696wms.18 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:30:50.061  INFO 11132 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-02-28 12:30:50.062  INFO 11132 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:30:50.064  INFO 11132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 12:30:50.073  INFO 11132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 12:34:09.833  WARN 14508 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Korisnik/.m2/repository/org/json/json/20180813/json-20180813.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Korisnik/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-28 12:34:09.859  INFO 14508 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Starting SubscriptionServiceImplTest using Java 15.0.2 on DESKTOP-NVAMDEM with PID 14508 (started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-28 12:34:09.860  INFO 14508 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 12:34:11.090  INFO 14508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-28 12:34:11.198  INFO 14508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 4 JPA repository interfaces.
+2023-02-28 12:34:12.199  INFO 14508 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-28 12:34:12.308  INFO 14508 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-28 12:34:12.540  INFO 14508 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-28 12:34:12.705  INFO 14508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 12:34:12.941  INFO 14508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 12:34:12.959  INFO 14508 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-28 12:34:13.981  INFO 14508 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-28 12:34:13.991  INFO 14508 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:34:14.923  INFO 14508 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-28 12:34:14.940  INFO 14508 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-28 12:34:14.940  INFO 14508 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-28 12:34:14.942  INFO 14508 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-28 12:34:14.943  INFO 14508 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-28 12:34:14.943  INFO 14508 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-28 12:34:14.943  INFO 14508 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-28 12:34:14.944  INFO 14508 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@694c0ed1
+2023-02-28 12:34:15.367  WARN 14508 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-28 12:34:16.161  INFO 14508 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7af17d31, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40612056, org.springframework.security.web.context.SecurityContextPersistenceFilter@c5c2a84, org.springframework.security.web.header.HeaderWriterFilter@549be307, org.springframework.security.web.authentication.logout.LogoutFilter@539f2fec, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58829c2c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52a23575, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f473daf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a49ce3a, org.springframework.security.web.session.SessionManagementFilter@1267f832, org.springframework.security.web.access.ExceptionTranslationFilter@76d220eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f541f60]
+2023-02-28 12:34:17.788  INFO 14508 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-28 12:34:17.803  INFO 14508 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-28 12:34:17.823  INFO 14508 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Started SubscriptionServiceImplTest in 8.399 seconds (JVM running for 9.688)
+2023-02-28 12:34:18.046  INFO 14508 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:34:18.359  INFO 14508 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:34:18.460  INFO 14508 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:34:18.468  INFO 14508 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-02-28 12:34:18.468  INFO 14508 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-02-28 12:34:18.468  INFO 14508 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:34:23.872 ERROR 14508 --- [createSchedulerFactory_Worker-1] org.quartz.core.JobRunShell              : Job DEFAULT.createJobDetailFactoryBean threw an unhandled Exception: 
+
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials s4-20020a5d6a84000000b002c551f7d452sm9743646wru.98 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:65) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:59) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials s4-20020a5d6a84000000b002c551f7d452sm9743646wru.98 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:34:23.873 ERROR 14508 --- [createSchedulerFactory_Worker-1] org.quartz.core.ErrorLogger              : Job (DEFAULT.createJobDetailFactoryBean threw an exception.
+
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials s4-20020a5d6a84000000b002c551f7d452sm9743646wru.98 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:65) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:59) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	... 1 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials s4-20020a5d6a84000000b002c551f7d452sm9743646wru.98 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:34:23.876  INFO 14508 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-02-28 12:34:23.878  INFO 14508 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:34:23.881  INFO 14508 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 12:34:23.890  INFO 14508 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 12:34:36.951  WARN 18600 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Korisnik/.m2/repository/org/json/json/20180813/json-20180813.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Korisnik/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-28 12:34:36.976  INFO 18600 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Starting SubscriptionServiceImplTest using Java 15.0.2 on DESKTOP-NVAMDEM with PID 18600 (started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-28 12:34:36.977  INFO 18600 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 12:34:38.305  INFO 18600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-28 12:34:38.449  INFO 18600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 4 JPA repository interfaces.
+2023-02-28 12:34:39.501  INFO 18600 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-28 12:34:39.581  INFO 18600 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-28 12:34:39.871  INFO 18600 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-28 12:34:40.054  INFO 18600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 12:34:40.375  INFO 18600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 12:34:40.403  INFO 18600 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-28 12:34:41.417  INFO 18600 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-28 12:34:41.433  INFO 18600 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:34:42.479  INFO 18600 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-28 12:34:42.499  INFO 18600 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-28 12:34:42.499  INFO 18600 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-28 12:34:42.501  INFO 18600 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-28 12:34:42.502  INFO 18600 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-28 12:34:42.502  INFO 18600 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-28 12:34:42.502  INFO 18600 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-28 12:34:42.502  INFO 18600 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@1822a61b
+2023-02-28 12:34:43.025  WARN 18600 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-28 12:34:43.858  INFO 18600 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@67748053, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7da59f6e, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d6e09f0, org.springframework.security.web.header.HeaderWriterFilter@74120029, org.springframework.security.web.authentication.logout.LogoutFilter@5825932c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@45fa7fb7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f3e6876, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52c2d1e8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7fb8d720, org.springframework.security.web.session.SessionManagementFilter@1d160161, org.springframework.security.web.access.ExceptionTranslationFilter@65029fc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c502018]
+2023-02-28 12:34:45.883  INFO 18600 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-28 12:34:45.884  INFO 18600 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-28 12:34:49.104  INFO 18600 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Started SubscriptionServiceImplTest in 12.586 seconds (JVM running for 14.281)
+2023-02-28 12:34:49.511  INFO 18600 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:34:49.542  INFO 18600 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:34:49.548  INFO 18600 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-02-28 12:34:49.548  INFO 18600 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-02-28 12:34:49.549  INFO 18600 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:34:53.230  INFO 18600 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:35:03.823 ERROR 18600 --- [createSchedulerFactory_Worker-1] org.quartz.core.JobRunShell              : Job DEFAULT.createJobDetailFactoryBean threw an unhandled Exception: 
+
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d10-20020a05600c3aca00b003eb369abd92sm11161276wms.2 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:65) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:59) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d10-20020a05600c3aca00b003eb369abd92sm11161276wms.2 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:35:04.466 ERROR 18600 --- [createSchedulerFactory_Worker-1] org.quartz.core.ErrorLogger              : Job (DEFAULT.createJobDetailFactoryBean threw an exception.
+
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d10-20020a05600c3aca00b003eb369abd92sm11161276wms.2 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:65) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:59) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	... 1 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d10-20020a05600c3aca00b003eb369abd92sm11161276wms.2 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:35:14.893  INFO 18600 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-02-28 12:35:14.896  INFO 18600 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:35:14.898  INFO 18600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 12:35:14.907  INFO 18600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 12:37:23.863  WARN 15848 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Korisnik/.m2/repository/org/json/json/20180813/json-20180813.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Korisnik/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-28 12:37:23.886  INFO 15848 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Starting SubscriptionServiceImplTest using Java 15.0.2 on DESKTOP-NVAMDEM with PID 15848 (started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-28 12:37:23.887  INFO 15848 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 12:37:25.183  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-28 12:37:25.272  INFO 15848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 4 JPA repository interfaces.
+2023-02-28 12:37:26.197  INFO 15848 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-28 12:37:26.254  INFO 15848 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-28 12:37:26.464  INFO 15848 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-28 12:37:26.630  INFO 15848 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 12:37:26.872  INFO 15848 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 12:37:26.892  INFO 15848 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-28 12:37:27.790  INFO 15848 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-28 12:37:27.799  INFO 15848 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:37:28.746  INFO 15848 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-28 12:37:28.766  INFO 15848 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-28 12:37:28.766  INFO 15848 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-28 12:37:28.767  INFO 15848 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-28 12:37:28.768  INFO 15848 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-28 12:37:28.769  INFO 15848 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-28 12:37:28.769  INFO 15848 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-28 12:37:28.769  INFO 15848 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@34cb1310
+2023-02-28 12:37:29.236  WARN 15848 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-28 12:37:29.963  INFO 15848 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3618486e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52c68925, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b48361e, org.springframework.security.web.header.HeaderWriterFilter@1a7f2d34, org.springframework.security.web.authentication.logout.LogoutFilter@195d4780, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@20e73e41, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@464017f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c4231e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ebd0b52, org.springframework.security.web.session.SessionManagementFilter@3f473daf, org.springframework.security.web.access.ExceptionTranslationFilter@1de6f29d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26398f67]
+2023-02-28 12:37:31.636  INFO 15848 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-28 12:37:31.637  INFO 15848 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-28 12:37:31.654  INFO 15848 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Started SubscriptionServiceImplTest in 8.184 seconds (JVM running for 9.525)
+2023-02-28 12:37:31.867  INFO 15848 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:37:32.139  INFO 15848 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:37:32.186  INFO 15848 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:37:32.196  INFO 15848 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-02-28 12:37:32.196  INFO 15848 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-02-28 12:37:32.196  INFO 15848 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:37:37.489 ERROR 15848 --- [createSchedulerFactory_Worker-1] org.quartz.core.JobRunShell              : Job DEFAULT.createJobDetailFactoryBean threw an unhandled Exception: 
+
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials m21-20020a7bcb95000000b003e21f959453sm12228036wmi.32 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:65) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:59) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials m21-20020a7bcb95000000b003e21f959453sm12228036wmi.32 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:37:37.492 ERROR 15848 --- [createSchedulerFactory_Worker-1] org.quartz.core.ErrorLogger              : Job (DEFAULT.createJobDetailFactoryBean threw an exception.
+
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials m21-20020a7bcb95000000b003e21f959453sm12228036wmi.32 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:65) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:59) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	... 1 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials m21-20020a7bcb95000000b003e21f959453sm12228036wmi.32 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:37:37.494  INFO 15848 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-02-28 12:37:37.499  INFO 15848 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:37:37.503  INFO 15848 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 12:37:37.522  INFO 15848 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 12:41:43.960  INFO 4696 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 4696 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-28 12:41:43.965  INFO 4696 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 12:41:45.358  INFO 4696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-28 12:41:45.468  INFO 4696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
+2023-02-28 12:41:46.481  INFO 4696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-28 12:41:46.493  INFO 4696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-28 12:41:46.494  INFO 4696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-28 12:41:46.679  INFO 4696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-28 12:41:46.679  INFO 4696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2642 ms
+2023-02-28 12:41:46.933  INFO 4696 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-28 12:41:46.995  INFO 4696 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-28 12:41:47.291  INFO 4696 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-28 12:41:47.391  INFO 4696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 12:41:47.565  INFO 4696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 12:41:47.579  INFO 4696 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-28 12:41:48.600  INFO 4696 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-28 12:41:48.609  INFO 4696 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:41:49.408  INFO 4696 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-28 12:41:49.422  INFO 4696 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-28 12:41:49.422  INFO 4696 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-28 12:41:49.423  INFO 4696 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-28 12:41:49.424  INFO 4696 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-28 12:41:49.425  INFO 4696 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-28 12:41:49.425  INFO 4696 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-28 12:41:49.425  INFO 4696 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@1d126f07
+2023-02-28 12:41:49.740  WARN 4696 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-28 12:41:50.175  INFO 4696 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7325b786, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f943847, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d8512e9, org.springframework.security.web.header.HeaderWriterFilter@38d9c9c4, org.springframework.security.web.authentication.logout.LogoutFilter@62536882, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@86e8469, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a045e85, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48861d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c376b44, org.springframework.security.web.session.SessionManagementFilter@4b8601a1, org.springframework.security.web.access.ExceptionTranslationFilter@29b2a94c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35d4fecf]
+2023-02-28 12:41:50.664  INFO 4696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-28 12:41:51.362  INFO 4696 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-28 12:41:51.362  INFO 4696 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-28 12:41:51.378  INFO 4696 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 7.968 seconds (JVM running for 8.478)
+2023-02-28 12:41:51.530  INFO 4696 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:49:50.155  WARN 7328 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Korisnik/.m2/repository/org/json/json/20180813/json-20180813.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Korisnik/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-28 12:49:50.181  INFO 7328 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Starting SubscriptionServiceImplTest using Java 15.0.2 on DESKTOP-NVAMDEM with PID 7328 (started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-28 12:49:50.182  INFO 7328 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 12:49:51.688  INFO 7328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-28 12:49:51.818  INFO 7328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 4 JPA repository interfaces.
+2023-02-28 12:49:53.130  INFO 7328 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-28 12:49:53.259  INFO 7328 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-28 12:49:53.608  INFO 7328 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-28 12:49:53.889  INFO 7328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 12:49:54.202  INFO 7328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 12:49:54.238  INFO 7328 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-28 12:49:55.613  INFO 7328 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-28 12:49:55.634  INFO 7328 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:49:56.779  INFO 7328 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-28 12:49:56.796  INFO 7328 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-28 12:49:56.796  INFO 7328 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-28 12:49:56.797  INFO 7328 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-28 12:49:56.798  INFO 7328 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-28 12:49:56.799  INFO 7328 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-28 12:49:56.800  INFO 7328 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-28 12:49:56.801  INFO 7328 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@34cb1310
+2023-02-28 12:49:57.331  WARN 7328 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-28 12:49:58.287  INFO 7328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ec729be, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f7da3a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@501956f9, org.springframework.security.web.header.HeaderWriterFilter@183435c0, org.springframework.security.web.authentication.logout.LogoutFilter@1a7f2d34, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6ddc817f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b1d93e9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@129b0ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24ea71d, org.springframework.security.web.session.SessionManagementFilter@36e11b60, org.springframework.security.web.access.ExceptionTranslationFilter@2c376461, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5825932c]
+2023-02-28 12:50:00.321  INFO 7328 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-28 12:50:00.322  INFO 7328 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-28 12:50:00.332  INFO 7328 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-02-28 12:50:00.341  INFO 7328 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Started SubscriptionServiceImplTest in 10.593 seconds (JVM running for 12.137)
+2023-02-28 12:50:00.601  INFO 7328 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:50:00.967  INFO 7328 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-02-28 12:50:01.004  INFO 7328 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-02-28 12:50:01.028  INFO 7328 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:50:01.042  INFO 7328 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-02-28 12:50:01.043  INFO 7328 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-02-28 12:50:01.043  INFO 7328 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:50:06.524 ERROR 7328 --- [createSchedulerFactory_Worker-1] org.quartz.core.JobRunShell              : Job DEFAULT.createJobDetailFactoryBean threw an unhandled Exception: 
+
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials q10-20020adfea0a000000b002c567b58e9asm9673284wrm.56 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:66) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:60) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials q10-20020adfea0a000000b002c567b58e9asm9673284wrm.56 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:50:06.525 ERROR 7328 --- [createSchedulerFactory_Worker-1] org.quartz.core.ErrorLogger              : Job (DEFAULT.createJobDetailFactoryBean threw an exception.
+
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials q10-20020adfea0a000000b002c567b58e9asm9673284wrm.56 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:66) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:60) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	... 1 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials q10-20020adfea0a000000b002c567b58e9asm9673284wrm.56 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:50:06.527  INFO 7328 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-02-28 12:50:06.532  INFO 7328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:50:06.537  INFO 7328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 12:50:06.554  INFO 7328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-28 12:51:16.167  WARN 10332 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Korisnik/.m2/repository/org/json/json/20180813/json-20180813.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Korisnik/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-28 12:51:16.190  INFO 10332 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Starting SubscriptionServiceImplTest using Java 15.0.2 on DESKTOP-NVAMDEM with PID 10332 (started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-02-28 12:51:16.191  INFO 10332 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : No active profile set, falling back to 1 default profile: "default"
+2023-02-28 12:51:17.484  INFO 10332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-28 12:51:17.627  INFO 10332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 4 JPA repository interfaces.
+2023-02-28 12:51:18.732  INFO 10332 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-28 12:51:18.827  INFO 10332 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-02-28 12:51:19.059  INFO 10332 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-28 12:51:19.278  INFO 10332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-28 12:51:19.540  INFO 10332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-28 12:51:19.559  INFO 10332 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-02-28 12:51:20.792  INFO 10332 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-28 12:51:20.805  INFO 10332 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:51:21.982  INFO 10332 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-28 12:51:22.006  INFO 10332 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-28 12:51:22.007  INFO 10332 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-02-28 12:51:22.009  INFO 10332 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-28 12:51:22.011  INFO 10332 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-28 12:51:22.012  INFO 10332 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-02-28 12:51:22.012  INFO 10332 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-02-28 12:51:22.013  INFO 10332 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@694c0ed1
+2023-02-28 12:51:22.539  WARN 10332 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-28 12:51:23.346  INFO 10332 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@518ed9b4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20e73e41, org.springframework.security.web.context.SecurityContextPersistenceFilter@52a23575, org.springframework.security.web.header.HeaderWriterFilter@642334d6, org.springframework.security.web.authentication.logout.LogoutFilter@4a561f7d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@59ac60d1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bb661e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18fcfe7e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@694dc99b, org.springframework.security.web.session.SessionManagementFilter@659565ed, org.springframework.security.web.access.ExceptionTranslationFilter@5ce1ec7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f6998b6]
+2023-02-28 12:51:25.146  INFO 10332 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-02-28 12:51:25.147  INFO 10332 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-02-28 12:51:25.154  INFO 10332 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-02-28 12:51:25.179  INFO 10332 --- [main] c.e.d.d.s.i.SubscriptionServiceImplTest  : Started SubscriptionServiceImplTest in 9.414 seconds (JVM running for 10.887)
+2023-02-28 12:51:25.401  INFO 10332 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-02-28 12:51:25.751  INFO 10332 --- [main] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-02-28 12:51:25.793  INFO 10332 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:51:25.799  INFO 10332 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-02-28 12:51:25.799  INFO 10332 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-02-28 12:51:25.800  INFO 10332 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-02-28 12:51:25.823  INFO 10332 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-02-28 12:51:32.020 ERROR 10332 --- [createSchedulerFactory_Worker-1] org.quartz.core.JobRunShell              : Job DEFAULT.createJobDetailFactoryBean threw an unhandled Exception: 
+
+org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z10-20020a5d44ca000000b002c6e8af1037sm9653995wrr.104 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:66) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:60) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z10-20020a5d44ca000000b002c6e8af1037sm9653995wrr.104 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:51:32.021 ERROR 10332 --- [createSchedulerFactory_Worker-1] org.quartz.core.ErrorLogger              : Job (DEFAULT.createJobDetailFactoryBean threw an exception.
+
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213) ~[quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) ~[quartz-2.3.2.jar:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z10-20020a5d44ca000000b002c6e8af1037sm9653995wrr.104 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:323) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:312) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at com.example.demo.demoapi.services.implementation.EmailSenderServiceImpl.sendEmail(EmailSenderServiceImpl.java:24) ~[classes/:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.lambda$sendWeatherInformation$0(SubscriptionServiceImpl.java:66) ~[classes/:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at com.example.demo.demoapi.services.implementation.SubscriptionServiceImpl.sendWeatherInformation(SubscriptionServiceImpl.java:60) ~[classes/:na]
+	at com.example.demo.demoapi.quartz.SendEmailJob.execute(SendEmailJob.java:18) ~[classes/:na]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:na]
+	... 1 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z10-20020a5d44ca000000b002c6e8af1037sm9653995wrr.104 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.23.jar:5.3.23]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.23.jar:5.3.23]
+	... 10 common frames omitted
+
+2023-02-28 12:51:32.023  INFO 10332 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-02-28 12:51:32.025  INFO 10332 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-28 12:51:32.027  INFO 10332 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-28 12:51:32.040  INFO 10332 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -30,29 +30,44 @@ public class SubscriptionServiceImpl implements SubscriptionService {
 
     @Override
     public void save(long userId, SubscribeRequest subscribeRequest) {
+        log.info("getting user");
         Optional<User> opUser = userRepository.findById(userId);
-        User user = opUser.get();
-        Subscription subscription = new Subscription(subscribeRequest.getType(), subscribeRequest.getCity(), user);
-        subscriptionRepository.save(subscription);
-
-        emailSenderService.sendEmail(user.getEmail(), EmailBaseParameters.SUB_SUBJECT, EmailBaseParameters.SUB_MESSAGE);
+        if (opUser.isPresent()) {
+            log.info("creating subscription");
+            User user = opUser.get();
+            if (subscribeRequest != null) {
+                Subscription subscription = new Subscription(subscribeRequest.getType(), subscribeRequest.getCity(), user);
+                subscriptionRepository.save(subscription);
+                emailSenderService.sendEmail(user.getEmail(), EmailBaseParameters.SUB_SUBJECT, EmailBaseParameters.SUB_MESSAGE);
+            } else {
+                log.warn("subscribe request not set");
+                throw new ApiRequestException("Subscribe details need to be added");
+            }
+        } else {
+            log.warn("user doesn't exist");
+            throw new ApiRequestException("User doesn't exist");
+        }
     }
 
     @Override
     public void sendWeatherInformation() {
-        List<Subscription> allSubscription= (List<Subscription>) subscriptionRepository.findAll();
+        log.info("Getting all subscriptions");
+        List<Subscription> allSubscription = (List<Subscription>) subscriptionRepository.findAll();
         if (allSubscription.isEmpty()) {
             throw new ApiRequestException("You need to subscribe first!");
         }
-
         log.info("Sending email for subscribers");
         allSubscription.stream().forEach(subscription -> {
             MyWeatherResponseDTO responseDTO = cityService.getCityWeather(subscription.getCity());
             Optional<User> userOptional = userRepository.findById(subscription.getUser().getId());
-            User user = userOptional.get();
-            String subject = EmailBaseParameters.generateSubjectForMail(responseDTO.getName());
-            String message = EmailBaseParameters.generateMessageForMail(responseDTO.getTemp(), responseDTO.getTempMax(), responseDTO.getTempMin(), responseDTO.getFeelsLike());
-            emailSenderService.sendEmail(user.getEmail(), subject, message);
+            if (userOptional.isPresent()) {
+                log.info("Getting user");
+                User user = userOptional.get();
+                emailSenderService.sendEmail(user.getEmail(), EmailBaseParameters.generateSubjectForMail(responseDTO.getName()), EmailBaseParameters.generateMessageForMail(responseDTO.getTemp(), responseDTO.getTempMax(), responseDTO.getTempMin(), responseDTO.getFeelsLike()));
+            } else {
+                log.warn("user doesn't exist");
+                throw new ApiRequestException("User need to be subscribe firs!");
+            }
         });
     }
 }

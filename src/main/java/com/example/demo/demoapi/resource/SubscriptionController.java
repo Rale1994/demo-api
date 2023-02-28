@@ -9,6 +9,8 @@ import org.quartz.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @Slf4j
 @RestController
 @RequestMapping(Constants.BASE_URL + "/subscribe")
@@ -24,7 +26,7 @@ public class SubscriptionController {
     }
 
     @PostMapping("/create/{userId}")
-    public void createSubscription(@PathVariable long userId, @RequestBody SubscribeRequest subscribeRequest) {
+    public void createSubscription(@PathVariable long userId, @Valid @RequestBody SubscribeRequest subscribeRequest) {
         subscriptionService.save(userId, subscribeRequest);
     }
 
