@@ -33,9 +33,9 @@ public class SubscriptionServiceImpl implements SubscriptionService {
         log.info("getting user");
         Optional<User> opUser = userRepository.findById(userId);
         if (opUser.isPresent()) {
-            log.info("creating subscription");
             User user = opUser.get();
             if (subscribeRequest != null) {
+                log.info("creating subscription");
                 Subscription subscription = new Subscription(subscribeRequest.getType(), subscribeRequest.getCity(), user);
                 subscriptionRepository.save(subscription);
                 emailSenderService.sendEmail(user.getEmail(), EmailBaseParameters.SUB_SUBJECT, EmailBaseParameters.SUB_MESSAGE);

@@ -1,8 +1,6 @@
 package com.example.demo.demoapi.services.implementation;
 
-import com.example.demo.demoapi.dtos.request.SubscribeRequest;
 import com.example.demo.demoapi.entity.Subscription;
-import com.example.demo.demoapi.entity.User;
 import com.example.demo.demoapi.exceptions.ApiRequestException;
 import com.example.demo.demoapi.repositories.SubscriptionRepository;
 import com.example.demo.demoapi.repositories.UserRepository;
@@ -19,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
@@ -125,6 +124,23 @@ class SubscriptionServiceImplTest {
 
         // THEN
         assertThrows(ApiRequestException.class, () -> subscriptionService.sendWeatherInformation());
+    }
 
+    @Test
+    public void testTryToSendWeatherInformationWithoutUser() {
+        // GIVEN
+        long userId = 1234l;
+        var myWeatherResponse = TestUtil.generateWeatherResponse();
+        var user = TestUtil.createUser();
+        user.setId(userId);
+        List<Subscription> subscriptions = TestUtil.generateListOfSubscriptions();
+
+        // WHEN
+        when(subscriptionRepository.findAll()).thenReturn(subscriptions);
+        when(cityService.getCityWeather("Priboj")).thenReturn(myWeatherResponse);
+        when(userRepository.findById(userId)).thenReturn(Optional.empty());
+
+        // THEN
+        assertThrows(ApiRequestException.class, () -> subscriptionService.sendWeatherInformation());
     }
 }
