@@ -12,3 +12,430 @@
 2023-03-23 16:00:01.762  INFO 1956 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-03-23 16:00:01.765  INFO 1956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-03-23 16:00:01.796  INFO 1956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-05 10:34:49.736  INFO 16272 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 16272 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-04-05 10:34:49.744  INFO 16272 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 10:34:52.649  INFO 16272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-05 10:34:53.003  INFO 16272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 321 ms. Found 4 JPA repository interfaces.
+2023-04-05 10:34:54.637  INFO 16272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 10:34:54.657  INFO 16272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 10:34:54.658  INFO 16272 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 10:34:54.915  INFO 16272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 10:34:54.916  INFO 16272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5049 ms
+2023-04-05 10:34:55.244  INFO 16272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-05 10:34:55.417  INFO 16272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-04-05 10:34:55.917  INFO 16272 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-05 10:34:56.094  INFO 16272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-05 10:34:56.418  INFO 16272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-05 10:34:56.446  INFO 16272 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-04-05 10:34:56.787 ERROR 16272 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: mappedBy reference an unknown target entity property: com.example.demo.demoapi.entity.Watch.watch in com.example.demo.demoapi.entity.City.watches
+2023-04-05 10:34:56.789  WARN 16272 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.example.demo.demoapi.entity.Watch.watch in com.example.demo.demoapi.entity.City.watches
+2023-04-05 10:34:56.791  INFO 16272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 10:34:56.804  INFO 16272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-05 10:34:56.812  INFO 16272 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-05 10:34:56.829  INFO 16272 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-05 10:34:56.864 ERROR 16272 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.example.demo.demoapi.entity.Watch.watch in com.example.demo.demoapi.entity.City.watches
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.example.demo.demoapi.DemoApiApplication.main(DemoApiApplication.java:18) ~[classes/:na]
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.example.demo.demoapi.entity.Watch.watch in com.example.demo.demoapi.entity.City.watches
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:875) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:826) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1653) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1629) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 16 common frames omitted
+
+2023-04-05 10:36:58.545  INFO 12728 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 12728 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-04-05 10:36:58.550  INFO 12728 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 10:37:00.048  INFO 12728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-05 10:37:00.191  INFO 12728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 4 JPA repository interfaces.
+2023-04-05 10:37:01.235  INFO 12728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 10:37:01.251  INFO 12728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 10:37:01.252  INFO 12728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 10:37:01.470  INFO 12728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 10:37:01.471  INFO 12728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2830 ms
+2023-04-05 10:37:01.750  INFO 12728 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-05 10:37:01.833  INFO 12728 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-04-05 10:37:02.099  INFO 12728 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-05 10:37:02.248  INFO 12728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-05 10:37:02.495  INFO 12728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-05 10:37:02.516  INFO 12728 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-04-05 10:37:03.942  INFO 12728 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-05 10:37:03.952  INFO 12728 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 10:37:04.840  INFO 12728 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-04-05 10:37:04.858  INFO 12728 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-04-05 10:37:04.858  INFO 12728 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-04-05 10:37:04.859  INFO 12728 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-04-05 10:37:04.860  INFO 12728 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-04-05 10:37:04.860  INFO 12728 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-04-05 10:37:04.860  INFO 12728 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-04-05 10:37:04.860  INFO 12728 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@59cb10e0
+2023-04-05 10:37:05.210  WARN 12728 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-05 10:37:05.767  INFO 12728 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b48361e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44b82007, org.springframework.security.web.context.SecurityContextPersistenceFilter@88e85a, org.springframework.security.web.header.HeaderWriterFilter@e5d9fa7, org.springframework.security.web.authentication.logout.LogoutFilter@431f8830, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@18fcfe7e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@663cc8c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51c15508, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ae22651, org.springframework.security.web.session.SessionManagementFilter@7e4bbda4, org.springframework.security.web.access.ExceptionTranslationFilter@24381e4a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c55e559]
+2023-04-05 10:37:06.286  INFO 12728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 10:37:06.941  INFO 12728 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-04-05 10:37:06.941  INFO 12728 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-04-05 10:37:06.967  INFO 12728 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-04-05 10:37:06.971  INFO 12728 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 8.996 seconds (JVM running for 9.631)
+2023-04-05 10:37:07.157  INFO 12728 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-04-05 10:37:07.567  INFO 12728 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 10:37:18.542  INFO 12728 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 10:37:28.975  INFO 12728 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 10:47:49.124  INFO 12728 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-04-05 10:47:49.147  INFO 12728 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-04-05 10:47:49.148  INFO 12728 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-04-05 10:47:49.148  INFO 12728 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-04-05 10:47:49.638  INFO 12728 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-04-05 10:47:49.640  INFO 12728 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 10:47:49.641  INFO 12728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 10:47:49.648  INFO 12728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-05 10:47:58.334  INFO 4832 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 4832 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-04-05 10:47:58.338  INFO 4832 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 10:48:00.308  INFO 4832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-05 10:48:00.414  INFO 4832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 4 JPA repository interfaces.
+2023-04-05 10:48:01.641  INFO 4832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 10:48:01.672  INFO 4832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 10:48:01.673  INFO 4832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 10:48:01.944  INFO 4832 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 10:48:01.945  INFO 4832 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3503 ms
+2023-04-05 10:48:02.237  INFO 4832 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-05 10:48:02.332  INFO 4832 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-04-05 10:48:02.645  INFO 4832 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-05 10:48:02.811  INFO 4832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-05 10:48:03.083  INFO 4832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-05 10:48:03.112  INFO 4832 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-04-05 10:48:04.677  INFO 4832 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-05 10:48:04.692  INFO 4832 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 10:48:05.644  INFO 4832 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-04-05 10:48:05.661  INFO 4832 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-04-05 10:48:05.661  INFO 4832 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-04-05 10:48:05.662  INFO 4832 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-04-05 10:48:05.663  INFO 4832 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-04-05 10:48:05.663  INFO 4832 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-04-05 10:48:05.663  INFO 4832 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-04-05 10:48:05.664  INFO 4832 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@24fb752f
+2023-04-05 10:48:06.062  WARN 4832 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-05 10:48:06.679  INFO 4832 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52a23575, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f473daf, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e243122, org.springframework.security.web.header.HeaderWriterFilter@39c93af6, org.springframework.security.web.authentication.logout.LogoutFilter@dffcf1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@c5c2a84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49b6373f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20f3291d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@390e814c, org.springframework.security.web.session.SessionManagementFilter@1fb379e4, org.springframework.security.web.access.ExceptionTranslationFilter@6c75c5e8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55e02661]
+2023-04-05 10:48:07.226  INFO 4832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 10:48:07.957  INFO 4832 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-04-05 10:48:07.957  INFO 4832 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-04-05 10:48:07.966  INFO 4832 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-04-05 10:48:07.979  INFO 4832 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 10.322 seconds (JVM running for 10.946)
+2023-04-05 10:48:08.175  INFO 4832 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-04-05 10:48:08.530  INFO 4832 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 10:48:19.494  INFO 4832 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 10:48:25.225  INFO 4832 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 10:49:00.570  INFO 4832 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-05 10:49:00.570  INFO 4832 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-05 10:49:00.576  INFO 4832 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-04-05 10:49:00.746  WARN 4832 --- [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [102] milliseconds.
+2023-04-05 15:34:50.685  WARN 4832 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h3m25s256ms700ns).
+2023-04-05 15:48:05.595  INFO 4832 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-04-05 15:48:05.605  INFO 4832 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-04-05 15:48:05.758  INFO 4832 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 15:48:11.772  INFO 4832 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 15:48:17.504  INFO 4832 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 15:55:09.105  INFO 4832 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-04-05 15:55:09.140  INFO 4832 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-04-05 15:55:09.140  INFO 4832 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-04-05 15:55:09.140  INFO 4832 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-04-05 15:55:09.465  INFO 4832 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-04-05 15:55:09.467  INFO 4832 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 15:55:09.470  INFO 4832 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 15:55:09.474  INFO 4832 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-05 15:55:22.760  INFO 17984 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 17984 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-04-05 15:55:22.774  INFO 17984 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 15:55:25.339  INFO 17984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-05 15:55:25.524  INFO 17984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 169 ms. Found 5 JPA repository interfaces.
+2023-04-05 15:55:27.124  INFO 17984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 15:55:27.143  INFO 17984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 15:55:27.144  INFO 17984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 15:55:27.390  INFO 17984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 15:55:27.390  INFO 17984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4482 ms
+2023-04-05 15:55:27.960  INFO 17984 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-05 15:55:28.134  INFO 17984 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-04-05 15:55:28.537  INFO 17984 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-05 15:55:28.708  INFO 17984 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-05 15:55:28.957  INFO 17984 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-05 15:55:28.993  INFO 17984 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-04-05 15:55:30.472  INFO 17984 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-05 15:55:30.488  INFO 17984 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 15:55:31.827  INFO 17984 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-04-05 15:55:31.848  INFO 17984 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-04-05 15:55:31.849  INFO 17984 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-04-05 15:55:31.851  INFO 17984 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-04-05 15:55:31.852  INFO 17984 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-04-05 15:55:31.853  INFO 17984 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-04-05 15:55:31.853  INFO 17984 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-04-05 15:55:31.853  INFO 17984 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@4587f0f9
+2023-04-05 15:55:32.380  WARN 17984 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-05 15:55:33.073  INFO 17984 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2220c5f7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5bb90b89, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ffb0bb4, org.springframework.security.web.header.HeaderWriterFilter@7e4bbda4, org.springframework.security.web.authentication.logout.LogoutFilter@949165f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5cb4ba80, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d7888a5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6dcdc378, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10b0dd3a, org.springframework.security.web.session.SessionManagementFilter@13288174, org.springframework.security.web.access.ExceptionTranslationFilter@2ec258f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@481eb705]
+2023-04-05 15:55:33.741  INFO 17984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 15:55:34.760  INFO 17984 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-04-05 15:55:34.762  INFO 17984 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-04-05 15:55:34.774  INFO 17984 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-04-05 15:55:34.787  INFO 17984 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 12.977 seconds (JVM running for 14.015)
+2023-04-05 15:55:35.044  INFO 17984 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-04-05 15:55:35.438  INFO 17984 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 15:55:46.508  INFO 17984 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 15:55:56.859  INFO 17984 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 15:56:57.505  INFO 17984 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-04-05 15:56:57.532  INFO 17984 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-04-05 15:56:57.534  INFO 17984 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-04-05 15:56:57.536  INFO 17984 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-04-05 15:56:57.592  INFO 17984 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-04-05 15:56:57.594  INFO 17984 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 15:56:57.596  INFO 17984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 15:56:57.608  INFO 17984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-05 16:04:32.370  INFO 11260 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 11260 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-04-05 16:04:32.374  INFO 11260 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 16:04:33.857  INFO 11260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-05 16:04:33.984  INFO 11260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 5 JPA repository interfaces.
+2023-04-05 16:04:35.156  INFO 11260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 16:04:35.170  INFO 11260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 16:04:35.170  INFO 11260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 16:04:35.386  INFO 11260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 16:04:35.386  INFO 11260 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2937 ms
+2023-04-05 16:04:35.673  INFO 11260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-05 16:04:35.749  INFO 11260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-04-05 16:04:36.007  INFO 11260 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-05 16:04:36.170  INFO 11260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-05 16:04:36.470  INFO 11260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-05 16:04:36.500  INFO 11260 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-04-05 16:04:37.658  INFO 11260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-05 16:04:37.670  INFO 11260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 16:04:38.606  INFO 11260 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-04-05 16:04:38.632  INFO 11260 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-04-05 16:04:38.633  INFO 11260 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-04-05 16:04:38.634  INFO 11260 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-04-05 16:04:38.636  INFO 11260 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-04-05 16:04:38.636  INFO 11260 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-04-05 16:04:38.636  INFO 11260 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-04-05 16:04:38.637  INFO 11260 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@3d8e1fa6
+2023-04-05 16:04:39.100  WARN 11260 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-05 16:04:39.704  INFO 11260 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@659565ed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@481eb705, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e8eea59, org.springframework.security.web.header.HeaderWriterFilter@6dd7af2f, org.springframework.security.web.authentication.logout.LogoutFilter@51c15508, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1267f832, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f9d8285, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67b1c3af, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ae0eb98, org.springframework.security.web.session.SessionManagementFilter@58df2864, org.springframework.security.web.access.ExceptionTranslationFilter@435e224d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@90b9695]
+2023-04-05 16:04:40.256  INFO 11260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 16:04:40.940  INFO 11260 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-04-05 16:04:40.941  INFO 11260 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-04-05 16:04:40.952  INFO 11260 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-04-05 16:04:40.958  INFO 11260 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 9.202 seconds (JVM running for 9.826)
+2023-04-05 16:04:41.206  INFO 11260 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-04-05 16:04:41.643  INFO 11260 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 16:04:53.459  INFO 11260 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 16:05:04.838  INFO 11260 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 16:06:28.306  INFO 11260 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-05 16:06:28.307  INFO 11260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-05 16:06:28.309  INFO 11260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-04-05 16:06:28.896 ERROR 11260 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "com.example.demo.demoapi.repositories.WatchRepository.save(Object)" because "this.watchRepository" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.example.demo.demoapi.repositories.WatchRepository.save(Object)" because "this.watchRepository" is null
+	at com.example.demo.demoapi.services.implementation.WatchServiceImpl.addWatch(WatchServiceImpl.java:33) ~[classes/:na]
+	at com.example.demo.demoapi.resource.WatchController.addWatch(WatchController.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696) ~[tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:198) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2023-04-05 16:09:30.667  INFO 11260 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-04-05 16:09:30.709  INFO 11260 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-04-05 16:09:30.710  INFO 11260 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-04-05 16:09:30.710  INFO 11260 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-04-05 16:09:30.996  INFO 11260 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-04-05 16:09:31.000  INFO 11260 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 16:09:31.002  INFO 11260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 16:09:31.010  INFO 11260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-05 16:09:37.504  INFO 10516 --- [main] c.e.demo.demoapi.DemoApiApplication      : Starting DemoApiApplication using Java 15.0.2 on DESKTOP-NVAMDEM with PID 10516 (C:\Users\Korisnik\Desktop\Java\demo-api\target\classes started by Korisnik in C:\Users\Korisnik\Desktop\Java\demo-api)
+2023-04-05 16:09:37.507  INFO 10516 --- [main] c.e.demo.demoapi.DemoApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-04-05 16:09:38.967  INFO 10516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-05 16:09:39.082  INFO 10516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 5 JPA repository interfaces.
+2023-04-05 16:09:40.069  INFO 10516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-05 16:09:40.086  INFO 10516 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-05 16:09:40.086  INFO 10516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-05 16:09:40.249  INFO 10516 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-05 16:09:40.249  INFO 10516 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2657 ms
+2023-04-05 16:09:40.488  INFO 10516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-05 16:09:40.560  INFO 10516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-04-05 16:09:40.787  INFO 10516 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-05 16:09:40.908  INFO 10516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-05 16:09:41.106  INFO 10516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-05 16:09:41.125  INFO 10516 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-04-05 16:09:42.247  INFO 10516 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-05 16:09:42.254  INFO 10516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 16:09:42.989  INFO 10516 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-04-05 16:09:43.007  INFO 10516 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-04-05 16:09:43.008  INFO 10516 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-04-05 16:09:43.009  INFO 10516 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-04-05 16:09:43.010  INFO 10516 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'createSchedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-04-05 16:09:43.010  INFO 10516 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'createSchedulerFactory' initialized from an externally provided properties instance.
+2023-04-05 16:09:43.010  INFO 10516 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-04-05 16:09:43.011  INFO 10516 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.example.demo.demoapi.SpringBeanConfiguration$1@5440a3a
+2023-04-05 16:09:43.307  WARN 10516 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-05 16:09:43.708  INFO 10516 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@542c6165, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@539f2fec, org.springframework.security.web.context.SecurityContextPersistenceFilter@dffcf1, org.springframework.security.web.header.HeaderWriterFilter@6b7ebac1, org.springframework.security.web.authentication.logout.LogoutFilter@55a2ca5e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1f3310fc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13288174, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24ae2183, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a4e1ca7, org.springframework.security.web.session.SessionManagementFilter@164cad52, org.springframework.security.web.access.ExceptionTranslationFilter@1cf7c055, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b48361e]
+2023-04-05 16:09:44.157  INFO 10516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-05 16:09:44.749  INFO 10516 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-04-05 16:09:44.749  INFO 10516 --- [main] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED started.
+2023-04-05 16:09:44.758  INFO 10516 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-04-05 16:09:44.764  INFO 10516 --- [main] c.e.demo.demoapi.DemoApiApplication      : Started DemoApiApplication in 7.739 seconds (JVM running for 8.292)
+2023-04-05 16:09:44.906  INFO 10516 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-04-05 16:09:45.226  INFO 10516 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 16:09:57.867  INFO 10516 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 16:10:02.369  INFO 10516 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-05 16:10:02.370  INFO 10516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-05 16:10:02.372  INFO 10516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-04-05 16:10:10.102  INFO 10516 --- [createSchedulerFactory_Worker-1] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 21:58:01.547  WARN 10516 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h6m55s726ms686µs900ns).
+2023-04-05 22:09:42.954  INFO 10516 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting all subscriptions
+2023-04-05 22:09:42.967  INFO 10516 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Sending email for subscribers
+2023-04-05 22:09:43.547  INFO 10516 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 22:09:46.921  INFO 10516 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 22:09:50.403  INFO 10516 --- [createSchedulerFactory_Worker-2] c.e.d.d.s.i.SubscriptionServiceImpl      : Getting user
+2023-04-05 22:13:48.821  INFO 10516 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-04-05 22:13:48.846  INFO 10516 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2023-04-05 22:13:48.846  INFO 10516 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutting down.
+2023-04-05 22:13:48.846  INFO 10516 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED paused.
+2023-04-05 22:13:49.252  INFO 10516 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler createSchedulerFactory_$_NON_CLUSTERED shutdown complete.
+2023-04-05 22:13:49.253  INFO 10516 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-05 22:13:49.275  INFO 10516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-05 22:13:49.291  INFO 10516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

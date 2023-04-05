@@ -34,7 +34,6 @@ public class UserController {
         return userService.getAll(pageable, predicate);
     }
 
-
     @PostMapping
     public UserResponseDTO create(@Valid @RequestBody UserDetailsRequest userDetailsRequest) {
         return userService.create(userDetailsRequest);

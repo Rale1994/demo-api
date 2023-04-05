@@ -42,6 +42,9 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Subscription> subscriptions;
 
+    @OneToMany(mappedBy = "user",
+            cascade = CascadeType.ALL)
+    private List<Watch> watches;
 
     public User(UserDetailsRequest userRequest) {
         this.firstName = userRequest.getFirstName();
